@@ -14,6 +14,10 @@ async function getArticles() {
 
     imageElement.src = article.image;
 
+    const linkElement = document.querySelector(".topic .news-card");
+
+    linkElement.href = "article/article.html?id=" + article.id;
+
 }
 
 getArticles();
