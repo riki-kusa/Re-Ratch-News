@@ -3,10 +3,10 @@ async function getArticles() {
     if (document.body.dataset.page === "detail") {
 
         const params = new URLSearchParams(location.search);
-        const id = params.get("id");
-
-        console.log(id);
-
+        const articleId = params.get("id");
+    
+        console.log(articleId);
+    
         return;
     }
 
