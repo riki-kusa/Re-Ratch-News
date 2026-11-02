@@ -1,5 +1,15 @@
 async function getArticles() {
 
+    if (document.body.dataset.page === "detail") {
+
+        const params = new URLSearchParams(location.search);
+        const id = params.get("id");
+
+        console.log(id);
+
+        return;
+    }
+
     const response = await fetch("./articles.json");
 
     const articles = await response.json();
