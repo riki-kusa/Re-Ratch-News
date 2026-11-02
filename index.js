@@ -1,1 +1,3 @@
-// GitDoc自動同期テスト
+async function getArticles() {
+
+}
