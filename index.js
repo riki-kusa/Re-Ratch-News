@@ -4,7 +4,11 @@ async function getArticles() {
 
     const articles = await response.json();
 
-    console.log(articles);
+    const article = articles[0];
+
+    const titleElement = document.querySelector(".topic .news-title");
+    
+    titleElement.textContent = article.title;
 
 }
 
