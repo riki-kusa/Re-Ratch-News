@@ -10,6 +10,10 @@ async function getArticles() {
     
     titleElement.textContent = article.title;
 
+    const imageElement = document.querySelector(".topic .news-image");
+
+    imageElement.src = article.image;
+
 }
 
 getArticles();
