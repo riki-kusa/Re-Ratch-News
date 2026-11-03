@@ -5,7 +5,14 @@ async function getArticles() {
         const params = new URLSearchParams(location.search);
         const articleId = params.get("id");
     
-        console.log(articleId);
+        const response = await fetch("../articles.json");
+        const articles = await response.json();
+        
+        const foundArticle = articles.find(function(article) {
+            return String(article.id) === articleId;
+        });
+        
+        console.log(foundArticle);
     
         return;
     }
