@@ -17,11 +17,14 @@ async function getArticles() {
         const detailTitle = document.querySelector(".detail-title");
         detailTitle.textContent = foundArticle.title;
 
+        const imageElement = document.querySelector(".detail-image");
+        imageElement.src = foundArticle.image;
+
         const detailBody = document.querySelector(".detail-body");
         detailBody.textContent = foundArticle.body;
 
-        const imageElement = document.querySelector(".detail-image");
-        imageElement.src = foundArticle.image;
+        const metaElement = document.querySelector(".detail-meta");
+        metaElement.textContent = "投稿者：" + foundArticle.author;
     
         return;
     }
