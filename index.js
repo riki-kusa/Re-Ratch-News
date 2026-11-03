@@ -19,6 +19,9 @@ async function getArticles() {
 
         const detailBody = document.querySelector(".detail-body");
         detailBody.textContent = foundArticle.body;
+
+        const imageElement = document.querySelector(".detail-image");
+        imageElement.src = foundArticle.image;
     
         return;
     }
@@ -30,15 +33,12 @@ async function getArticles() {
     const article = articles[0];
 
     const titleElement = document.querySelector(".topic .news-title");
-    
     titleElement.textContent = article.title;
 
     const imageElement = document.querySelector(".topic .news-image");
-
     imageElement.src = article.image;
 
     const linkElement = document.querySelector(".topic .news-card");
-
     linkElement.href = "article/article.html?id=" + article.id;
 
 }
