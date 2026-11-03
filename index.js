@@ -23,11 +23,14 @@ async function getArticles() {
         const detailBody = document.querySelector(".detail-body");
         detailBody.textContent = foundArticle.body;
 
-        const detailBody = document.querySelector(".detail-body");
-        detailBody.textContent = foundArticle.body;
+        const detailcredits = document.querySelector(".detail-credits");
+        detailcredits.textContent = foundArticle.credits;
 
         const metaElement = document.querySelector(".detail-meta");
         metaElement.textContent = "投稿者：" + foundArticle.author;
+
+        const linkElement = document.querySelector(".detail-original");
+        linkElement.href = "article/article.html?id=" + article.id;
     
         return;
     }
