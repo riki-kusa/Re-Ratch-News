@@ -13,6 +13,10 @@ async function getArticles() {
         });
         
         console.log(foundArticle);
+
+        const detailTitle = document.querySelector(".detail-title");
+
+        detailTitle.textContent = foundArticle.title;
     
         return;
     }
