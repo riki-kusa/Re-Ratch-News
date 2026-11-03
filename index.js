@@ -30,7 +30,7 @@ async function getArticles() {
         metaElement.textContent = "投稿者：" + foundArticle.author;
 
         const linkElement = document.querySelector(".detail-original");
-        linkElement.href = "article/article.html?id=" + article.id;
+        linkElement.href = "https://scratch.mit.edu/projects/" + article.id;
     
         return;
     }
