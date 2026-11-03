@@ -23,6 +23,9 @@ async function getArticles() {
         const detailBody = document.querySelector(".detail-body");
         detailBody.textContent = foundArticle.body;
 
+        const detailBody = document.querySelector(".detail-body");
+        detailBody.textContent = foundArticle.body;
+
         const metaElement = document.querySelector(".detail-meta");
         metaElement.textContent = "投稿者：" + foundArticle.author;
     
