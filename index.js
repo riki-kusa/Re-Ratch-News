@@ -55,14 +55,19 @@ async function getArticles() {
     const subtitleElement = document.querySelector(".topic .news-subtitle");
     subtitleElement.textContent = sharedDate + " / " + article.author;
 
-    articles.forEach(function(item) {
-        console.log(item.title);
-    });
-
     const latestList = document.querySelector(".latest-list");
     const originalCard = latestList.querySelector(".latest-card");
-    const copiedCard = originalCard.cloneNode(true);
-    latestList.append(copiedCard);
+    
+    latestList.replaceChildren();
+    
+    articles.slice(0, 4).forEach(function(item) {
+        const card = originalCard.cloneNode(true);
+    
+        card.querySelector(".latest-title").textContent = item.title;
+    
+        latestList.append(card);
+    });
+    
 
 }
 
