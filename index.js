@@ -67,7 +67,7 @@ async function getArticles() {
 
         card.querySelector("img").src = item.image;
 
-        card.querySelector(".latest-card").textContent =  "https://scratch.mit.edu/projects/" + item.id;
+        card.href =  "article/article.html?id=" + item.id;
 
         card.querySelector(".latest-date").textContent = item.sharedAt.toLocaleDateString("ja-JP", {timeZone: "Asia/Tokyo"}); + item.author;
     
