@@ -64,6 +64,10 @@ async function getArticles() {
         const card = originalCard.cloneNode(true);
     
         card.querySelector(".latest-title").textContent = item.title;
+
+        card.querySelector(".latest-card .img").textContent = item.image
+
+        card.querySelector(".latest-card .img").textContent = item.image
     
         latestList.append(card);
     });
