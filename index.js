@@ -51,6 +51,10 @@ async function getArticles() {
     const linkElement = document.querySelector(".topic .news-card");
     linkElement.href = "article/article.html?id=" + article.id;
 
+    const sharedDate = new Date(article.sharedAt).toLocaleDateString("ja-JP", {timeZone: "Asia/Tokyo"});
+    const subtitleElement = document.querySelector(".topic .news-subtitle");
+    subtitleElement.textContent = sharedDate + " / " + article.author;
+
 }
 
 getArticles();
