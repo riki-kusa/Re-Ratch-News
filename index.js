@@ -59,7 +59,11 @@ async function getArticles() {
         console.log(item.title);
     });
 
-    
+    const latestList = document.querySelector(".latest-list");
+    const originalCard = latestList.querySelector(".latest-card");
+    const copiedCard = originalCard.cloneNode(true);
+    latestList.append(copiedCard);
+
 }
 
 getArticles();
