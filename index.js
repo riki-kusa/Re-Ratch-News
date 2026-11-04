@@ -59,6 +59,7 @@ async function getArticles() {
         console.log(item.title);
     });
 
+    
 }
 
 getArticles();
