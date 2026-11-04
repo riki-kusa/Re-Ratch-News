@@ -27,7 +27,11 @@ async function getArticles() {
         detailcredits.textContent = foundArticle.credits;
 
         const metaElement = document.querySelector(".detail-meta");
-        metaElement.textContent = "投稿者：" + foundArticle.author;
+        const sharedDate = new Date(foundArticle.sharedAt).toLocaleDateString("ja-JP", {
+            timeZone: "Asia/Tokyo"
+        });
+        
+        metaElement.textContent = sharedDate + " / 投稿者：" + foundArticle.author;
 
 
 
