@@ -37,8 +37,9 @@ async function getArticles() {
     }
 
     const response = await fetch("./articles.json");
-
     const articles = await response.json();
+
+    
 
     const article = articles[0];
 
