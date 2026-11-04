@@ -55,6 +55,10 @@ async function getArticles() {
     const subtitleElement = document.querySelector(".topic .news-subtitle");
     subtitleElement.textContent = sharedDate + " / " + article.author;
 
+    articles.forEach(function(item) {
+        console.log(item.title);
+    });
+
 }
 
 getArticles();
