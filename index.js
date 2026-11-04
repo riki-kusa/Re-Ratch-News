@@ -65,7 +65,7 @@ async function getArticles() {
     
         card.querySelector(".latest-title").textContent = item.title;
 
-        card.querySelector(".latest-card .img").textContent = item.image;
+        card.querySelector("img").src = item.image;
 
         card.querySelector(".latest-card").textContent =  "https://scratch.mit.edu/projects/" + item.id;
 
