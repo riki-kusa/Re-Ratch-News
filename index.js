@@ -65,9 +65,11 @@ async function getArticles() {
     
         card.querySelector(".latest-title").textContent = item.title;
 
-        card.querySelector(".latest-card .img").textContent = item.image
+        card.querySelector(".latest-card .img").textContent = item.image;
 
-        card.querySelector(".latest-card .img").textContent = item.image
+        card.querySelector(".latest-card").textContent =  "https://scratch.mit.edu/projects/" + item.id;
+
+        card.querySelector(".latest-date").textContent = item.sharedAt.toLocaleDateString("ja-JP", {timeZone: "Asia/Tokyo"}); + item.author;
     
         latestList.append(card);
     });
