@@ -39,7 +39,9 @@ async function getArticles() {
     const response = await fetch("./articles.json");
     const articles = await response.json();
 
-    
+    const latestArticles = articles.slice().sort(function(a, b) {
+        return new Date(b.sharedAt) - new Date(a.sharedAt);
+    });
 
     const article = articles[0];
 
@@ -61,7 +63,7 @@ async function getArticles() {
     
     latestList.replaceChildren();
     
-    articles.slice(0, 4).forEach(function(item) {
+    latestArticles.slice(0, 4).forEach(function(item) {
         const card = originalCard.cloneNode(true);
     
         card.querySelector(".latest-title").textContent = item.title;
