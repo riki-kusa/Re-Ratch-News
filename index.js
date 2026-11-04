@@ -69,7 +69,8 @@ async function getArticles() {
 
         card.href =  "article/article.html?id=" + item.id;
 
-        card.querySelector(".latest-date").textContent = item.sharedAt.toLocaleDateString("ja-JP", {timeZone: "Asia/Tokyo"}); + item.author;
+        const date = new Date(item.sharedAt).toLocaleDateString("ja-JP", {timeZone: "Asia/Tokyo"});
+        card.querySelector(".latest-date").textContent = date + " / " + item.author;
     
         latestList.append(card);
     });
