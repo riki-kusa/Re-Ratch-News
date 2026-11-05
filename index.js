@@ -36,6 +36,17 @@ async function getArticles() {
         return;
     }
 
+    if (document.body.dataset.page === "archive") {
+
+        const response = await fetch("../articles.json");
+        const articles = await response.json();
+    
+        const title = document.querySelector(".archive-list .archive-title");
+        title.textContent = articles[0].title;
+    
+        return;
+    }
+
     const response = await fetch("./articles.json");
     const articles = await response.json();
 
