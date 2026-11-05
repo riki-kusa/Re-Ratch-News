@@ -41,8 +41,18 @@ async function getArticles() {
         const response = await fetch("../articles.json");
         const articles = await response.json();
     
-        const title = document.querySelector(".archive-list .archive-title");
-        title.textContent = articles[0].title;
+        const archiveList = document.querySelector(".archive-list");
+        const sampleCard = archiveList.querySelector(".archive-card");
+        
+        archiveList.replaceChildren();
+        
+        articles.forEach(function(item) {
+            const card = sampleCard.cloneNode(true);
+        
+            card.querySelector(".archive-title").textContent = item.title;
+        
+            archiveList.append(card);
+        });
     
         return;
     }
