@@ -54,7 +54,7 @@ async function getArticles() {
             card.querySelector("img").src = item.image;
 
             const sharedDate = new Date(item.sharedAt).toLocaleDateString("ja-JP", {timeZone: "Asia/Tokyo"});
-            card.subtitleElement.textContent = sharedDate + " / " + item.author;
+            card.querySelector(".archive-date").textContent = sharedDate + " / " + item.author;
 
             
         
