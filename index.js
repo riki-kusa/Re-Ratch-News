@@ -50,6 +50,8 @@ async function getArticles() {
             const card = sampleCard.cloneNode(true);
         
             card.querySelector(".archive-title").textContent = item.title;
+
+            
         
             archiveList.append(card);
         });
