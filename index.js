@@ -112,7 +112,6 @@ async function getArticles() {
         latestList.append(card);
     });
     
-    const score = item.favorites * 2 + item.loves;
 
 }
 
