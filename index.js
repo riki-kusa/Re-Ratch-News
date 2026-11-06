@@ -57,6 +57,8 @@ async function getArticles() {
             card.querySelector(".archive-date").textContent = sharedDate + " / " + item.author;
 
             card.querySelector(".archive-desc").textContent = item.body.slice(0, 10) + "…";
+
+            card.href = "../article/article.html?id=" + item.id;
         
             archiveList.append(card);
         });
