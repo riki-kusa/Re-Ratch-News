@@ -40,13 +40,17 @@ async function getArticles() {
 
         const response = await fetch("../articles.json");
         const articles = await response.json();
+
+        const sortedArticles = articles.slice().sort(function(a, b) {
+            return new Date(b.sharedAt) - new Date(a.sharedAt);
+        });
     
         const archiveList = document.querySelector(".archive-list");
         const sampleCard = archiveList.querySelector(".archive-card");
         
         archiveList.replaceChildren();
         
-        articles.forEach(function(item) {
+        sortedArticles.forEach(function(item) {
             const card = sampleCard.cloneNode(true);
         
             card.querySelector(".archive-title").textContent = item.title;
