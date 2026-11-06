@@ -66,7 +66,7 @@ async function getArticles() {
         
             archiveList.append(card);
         });
-    
+        
         return;
     }
 
