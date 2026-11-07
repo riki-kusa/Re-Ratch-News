@@ -166,7 +166,7 @@ header {
   cursor: pointer;
   font: inherit;
   border-radius: 5px;
-  transition: transform 0.2s ease;
+  transition: transform 0.4s ease;
 }
 
 .archive-tab:hover {
