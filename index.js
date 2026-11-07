@@ -70,9 +70,21 @@ async function getArticles() {
         const archiveTabs = document.querySelectorAll(".archive-tab");
 
         archiveTabs.forEach(function(button) {
-          button.addEventListener("click", function() {
-            console.log(button.dataset.mode);
-          });
+        
+            button.addEventListener("click", function() {
+        
+                archiveTabs.forEach(function(tab) {
+                    tab.classList.remove("is-active");
+                    tab.setAttribute("aria-pressed", "false");
+                });
+        
+                button.classList.add("is-active");
+                button.setAttribute("aria-pressed", "true");
+        
+                console.log(button.dataset.mode);
+        
+            });
+        
         });
 
         return;
