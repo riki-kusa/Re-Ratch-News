@@ -51,21 +51,34 @@ async function getArticles() {
         archiveList.replaceChildren();
         
         sortedArticles.forEach(function(item) {
-            const card = sampleCard.cloneNode(true);
         
-            card.querySelector(".archive-title").textContent = item.title;
+            function showArchive(articleList) {
 
-            card.querySelector("img").src = item.image;
+               archiveList.replaceChildren();
 
-            const sharedDate = new Date(item.sharedAt).toLocaleDateString("ja-JP", {timeZone: "Asia/Tokyo"});
-            card.querySelector(".archive-date").textContent = sharedDate + " / " + item.author;
+               articleList.forEach(function(item) {
+                    const card = sampleCard.cloneNode(true);
 
-            card.querySelector(".archive-desc").textContent = item.body.slice(0, 15) + "…";
+                    card.querySelector(".archive-title").textContent = item.title;
 
-            card.href = "../article/article.html?id=" + item.id;
+                    card.querySelector("img").src = item.image;
+
+                    const sharedDate = new Date(item.sharedAt).toLocaleDateString("ja-JP", {timeZone: "Asia/Tokyo"});
+                    card.querySelector(".archive-date").textContent = sharedDate + " / " + item.author;
+
+                    card.querySelector(".archive-desc").textContent = item.body.slice(0, 10) + "…";
+
+                    card.href = "../article/article.html?id=" + item.id;
+
+                    archiveList.append(card);
         
-            archiveList.append(card);
-        });
+                });
+            }
+        }   
+    }
+
+    showArchive(sortedArticles);
+
         
         const archiveTabs = document.querySelectorAll(".archive-tab");
 
@@ -81,7 +94,12 @@ async function getArticles() {
                 button.classList.add("is-active");
                 button.setAttribute("aria-pressed", "true");
         
-                console.log(button.dataset.mode);
+                if (button.dataset.mode === "latest") {
+                    showArchive(sortedArticles);
+                } else {
+                    archiveList.replaceChildren();
+                    archiveList.textContent = "人気記事の集計データを準備中です。";
+                }
         
             });
         
