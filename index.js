@@ -67,6 +67,14 @@ async function getArticles() {
             archiveList.append(card);
         });
         
+        const archiveTabs = document.querySelectorAll(".archive-tab");
+
+archiveTabs.forEach(function(button) {
+    button.addEventListener("click", function() {
+        console.log(button.dataset.mode);
+    });
+});
+
         return;
     }
 
