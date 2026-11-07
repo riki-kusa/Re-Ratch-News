@@ -60,7 +60,7 @@ async function getArticles() {
             const sharedDate = new Date(item.sharedAt).toLocaleDateString("ja-JP", {timeZone: "Asia/Tokyo"});
             card.querySelector(".archive-date").textContent = sharedDate + " / " + item.author;
 
-            card.querySelector(".archive-desc").textContent = item.body.slice(0, 10) + "…";
+            card.querySelector(".archive-desc").textContent = item.body.slice(0, 15) + "…";
 
             card.href = "../article/article.html?id=" + item.id;
         
