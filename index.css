@@ -151,6 +151,28 @@ header {
   line-height: 1.4
 }
 
+.archive-tabs {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.archive-tab {
+  padding: 9px 22px;
+  border: 1px solid rgb(213, 213, 213);
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  font: inherit;
+  border-radius: 5px;
+}
+
+.archive-tab.is-active {
+  background-color: #333;
+  color: white;
+  border-color: #333;
+}
+
 .news-card {
     position: relative;
     display: block;
