@@ -48,37 +48,29 @@ async function getArticles() {
         const archiveList = document.querySelector(".archive-list");
         const sampleCard = archiveList.querySelector(".archive-card");
         
-        archiveList.replaceChildren();
         
-        sortedArticles.forEach(function(item) {
-        
-            function showArchive(articleList) {
+        function showArchive(articleList) {
 
-               archiveList.replaceChildren();
+            archiveList.replaceChildren();
 
-               articleList.forEach(function(item) {
-                    const card = sampleCard.cloneNode(true);
+            articleList.forEach(function(item) {
+                const card = sampleCard.cloneNode(true);
 
-                    card.querySelector(".archive-title").textContent = item.title;
+                card.querySelector(".archive-title").textContent = item.title;
+                card.querySelector("img").src = item.image;
 
-                    card.querySelector("img").src = item.image;
+                const sharedDate = new Date(item.sharedAt).toLocaleDateString("ja-JP", {timeZone: "Asia/Tokyo"});
 
-                    const sharedDate = new Date(item.sharedAt).toLocaleDateString("ja-JP", {timeZone: "Asia/Tokyo"});
-                    card.querySelector(".archive-date").textContent = sharedDate + " / " + item.author;
+                card.querySelector(".archive-date").textContent = sharedDate + " / " + item.author;
+                card.querySelector(".archive-desc").textContent = item.body.slice(0, 10) + "…";
+                card.href = "../article/article.html?id=" + item.id;
 
-                    card.querySelector(".archive-desc").textContent = item.body.slice(0, 10) + "…";
+                archiveList.append(card);
 
-                    card.href = "../article/article.html?id=" + item.id;
-
-                    archiveList.append(card);
-        
-                });
             }
-        }   
-    }
-
-    showArchive(sortedArticles);
-
+        }
+            
+        showArchive(sortedArticles);
         
         const archiveTabs = document.querySelectorAll(".archive-tab");
 
