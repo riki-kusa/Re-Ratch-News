@@ -155,11 +155,11 @@ header {
   display: flex;
   margin-left: auto;
   gap: 10px;
-  margin: 20px 5px;
+  margin: 10px 5px;
 }
 
 .archive-tab {
-  padding: 6px 6px;
+  padding: 6px 12px;
   border: 1px solid rgb(213, 213, 213);
   background-color: white;
   color: black;
