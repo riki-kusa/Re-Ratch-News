@@ -13,7 +13,7 @@ async function getArticles() {
             return String(article.id) === articleId;
         });
         
-        
+
         console.log(foundArticle);
 
         const detailTitle = document.querySelector(".detail-title");
