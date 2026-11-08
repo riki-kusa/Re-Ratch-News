@@ -1,3 +1,4 @@
+
 async function getArticles() {
 
     if (document.body.dataset.page === "detail") {
@@ -56,7 +57,6 @@ async function getArticles() {
             articleList.forEach(function(item) {
                 const card = sampleCard.cloneNode(true);
 
-                
                 card.querySelector(".archive-title").textContent = item.title;
                 card.querySelector("img").src = item.image;
 
@@ -66,10 +66,10 @@ async function getArticles() {
                 card.querySelector(".archive-desc").textContent = item.body.slice(0, 10) + "…";
                 card.href = "../article/article.html?id=" + item.id;
 
-
+                
                 archiveList.append(card);
 
-            }
+            });
         }
             
         showArchive(sortedArticles);
