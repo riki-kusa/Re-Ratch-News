@@ -1,1 +1,2 @@
 name: Read articles test
+on: workflow_dispatch
