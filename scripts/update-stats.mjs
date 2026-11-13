@@ -29,3 +29,5 @@ for (const article of articles) {
 
 }
 const jsonText = JSON.stringify(articles, null, 4) + "\n";
+
+await writeFile("./articles.json", jsonText, "utf8");
