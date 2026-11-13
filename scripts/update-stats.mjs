@@ -10,6 +10,10 @@ for (const article of articles) {
         "https://api.scratch.mit.edu/projects/" + article.id
     );
 
+    if (!response.ok) {
+        throw new Error("API取得失敗: HTTP " + response.status);
+    }
+
     const project = await response.json();
 
     article.favorites = project.stats.favorites;
