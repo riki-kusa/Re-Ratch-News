@@ -4,8 +4,6 @@ const fileText = await readFile("./articles.json", "utf8");
 
 const articles = JSON.parse(fileText);
 
-console.log(articles);
-
 for (const article of articles) {
 
     const response = await fetch(
