@@ -28,3 +28,4 @@ for (const article of articles) {
     article.loves = project.stats.loves;
 
 }
+const jsonText = JSON.stringify(articles, null, 4) + "\n";
