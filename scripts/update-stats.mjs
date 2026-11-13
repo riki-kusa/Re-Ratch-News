@@ -16,6 +16,14 @@ for (const article of articles) {
 
     const project = await response.json();
 
+    if (
+        !project.stats ||
+        !Number.isInteger(project.stats.favorites) ||
+        !Number.isInteger(project.stats.loves)
+    ) {
+        throw new Error("反応数を取得できませんでした: " + article.id);
+    }
+
     article.favorites = project.stats.favorites;
     article.loves = project.stats.loves;
 
