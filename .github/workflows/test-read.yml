@@ -13,7 +13,7 @@ jobs:
         with:
           node-version: "22"
       - run: node scripts/update-stats.mjs
-            - name: Save updated articles
+      - name: Save updated articles
         run: |
           git add articles.json
 
