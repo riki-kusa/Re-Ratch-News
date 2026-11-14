@@ -448,7 +448,7 @@ header {
   border: 1px solid #990000;
   border-radius: 5px;
   color: #990000;
-  transition: background-color 0.2s, color 0.2s;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .detail-original:hover {
