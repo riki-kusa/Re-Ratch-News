@@ -95,8 +95,7 @@ async function getArticles() {
                 if (button.dataset.mode === "latest") {
                     showArchive(sortedArticles);
                 } else {
-                    archiveList.replaceChildren();
-                    archiveList.textContent = "人気記事の集計データを準備中です。";
+                    showArchive(popularArticles);
                 }
         
             });
