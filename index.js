@@ -5,7 +5,7 @@ async function getArticles() {
 
         const params = new URLSearchParams(location.search);
         const articleId = params.get("id");
-    
+
         const response = await fetch("../articles.json");
         const articles = await response.json();
         
