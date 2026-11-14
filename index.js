@@ -116,7 +116,14 @@ async function getArticles() {
         return (b.favorites * 2 + b.loves) - (a.favorites * 2 + a.loves);
     });
 
-    const article = articles[0];
+    
+    const start = Math.floor(popularArticles.length / 3);
+    const end = Math.ceil(popularArticles.length * 2 / 3);
+
+    const topicCandidates = popularArticles.slice(start, end);
+
+    const article = topicCandidates[Math.floor(Math.random() * topicCandidates.length)];
+
 
     const titleElement = document.querySelector(".topic .news-title");
     titleElement.textContent = article.title;
