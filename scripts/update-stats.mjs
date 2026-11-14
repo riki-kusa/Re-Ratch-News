@@ -2,7 +2,7 @@ import { readFile, writeFile } from "node:fs/promises";
 
 const fileText = await readFile("./articles.json", "utf8");
 
-const articles = JSON.parse(fileText);
+let articles = JSON.parse(fileText);
 
 const studioProjects = [];
 let offset = 0;
@@ -31,6 +31,18 @@ while (true) {
 
     offset += 40;
 }
+
+
+if (studioProjects.length === 0) {
+    throw new Error("スタジオの取得結果が空のため、更新を停止します");
+}
+
+articles = articles.filter(function(article) {
+    return studioProjects.some(function(studioProject) {
+        return studioProject.id === article.id;
+    });
+});
+
 
 const newProjectIds = [];
 
