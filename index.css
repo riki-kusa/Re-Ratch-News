@@ -390,6 +390,77 @@ header {
 
 
 
+/* 記事詳細ページ */
+
+.article-detail {
+  max-width: 850px;
+  margin: 0 auto 80px;
+  padding: 35px 45px;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+}
+
+.detail-title {
+  font-size: 32px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.detail-meta {
+  margin-top: 15px;
+  margin-bottom: 30px;
+  font-size: 13px;
+  color: #888;
+}
+
+.detail-image {
+  display: block;
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  margin: 0 auto 35px;
+  border-radius: 6px;
+}
+
+.detail-body {
+  font-size: 16px;
+  line-height: 2;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #ddd;
+}
+
+.article-detail h2 {
+  margin-top: 35px;
+  margin-bottom: 15px;
+  font-size: 21px;
+}
+
+.detail-credits {
+  color: #555;
+  font-size: 14px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  margin-bottom: 30px;
+}
+
+.detail-original {
+  display: inline-block;
+  padding: 12px 18px;
+  border: 1px solid #990000;
+  border-radius: 5px;
+  color: #990000;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.detail-original:hover {
+  background-color: #990000;
+  color: white;
+}
+
+
 .topic,
 .latest,
 .popular,
@@ -426,6 +497,8 @@ header {
   }
 
 
+
+
 @media screen and (max-width: 768px) {
     
   .news-top {
@@ -439,6 +512,19 @@ header {
     
   .popular-grid {
     grid-template-columns: 1fr;
+  }
+
+  .article-detail {
+    padding: 25px 18px;
+  }
+
+.detail-title {
+    font-size: 24px;
+  }
+
+.detail-body {
+    font-size: 15px;
+    line-height: 1.9;
   }
     
 }
