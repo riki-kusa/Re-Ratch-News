@@ -423,8 +423,9 @@ header {
   line-height: 2;
   white-space: pre-wrap;
   overflow-wrap: anywhere;
-  padding-bottom: 40px;
-  border-top: 3px solid black;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
 }
 
