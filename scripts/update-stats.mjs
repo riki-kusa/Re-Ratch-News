@@ -4,6 +4,34 @@ const fileText = await readFile("./articles.json", "utf8");
 
 const articles = JSON.parse(fileText);
 
+
+const studioResponse = await fetch(
+    "https://api.scratch.mit.edu/studios/52054890/projects?limit=40&offset=0"
+);
+
+if (!studioResponse.ok) {
+    throw new Error("スタジオ取得失敗: HTTP " + studioResponse.status);
+}
+
+const studioProjects = await studioResponse.json();
+
+const newProjectIds = [];
+
+for (const studioProject of studioProjects) {
+
+    const exists = articles.some(function(article) {
+        return article.id === studioProject.id;
+    });
+
+    if (!exists) {
+        newProjectIds.push(studioProject.id);
+    }
+
+}
+
+console.log("未登録の作品ID:", newProjectIds);
+
+
 for (const article of articles) {
 
     const response = await fetch(
