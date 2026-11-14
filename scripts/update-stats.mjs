@@ -4,16 +4,33 @@ const fileText = await readFile("./articles.json", "utf8");
 
 const articles = JSON.parse(fileText);
 
+const studioProjects = [];
+let offset = 0;
 
-const studioResponse = await fetch(
-    "https://api.scratch.mit.edu/studios/52054890/projects?limit=40&offset=0"
-);
+while (true) {
 
-if (!studioResponse.ok) {
-    throw new Error("スタジオ取得失敗: HTTP " + studioResponse.status);
+    const studioResponse = await fetch(
+        "https://api.scratch.mit.edu/studios/52054890/projects?limit=40&offset=" + offset
+    );
+
+    if (!studioResponse.ok) {
+        throw new Error("スタジオ取得失敗: HTTP " + studioResponse.status);
+    }
+
+    const pageProjects = await studioResponse.json();
+
+    if (!Array.isArray(pageProjects)) {
+        throw new Error("スタジオAPIの応答が配列ではありません");
+    }
+
+    studioProjects.push(...pageProjects);
+
+    if (pageProjects.length < 40) {
+        break;
+    }
+
+    offset += 40;
 }
-
-const studioProjects = await studioResponse.json();
 
 const newProjectIds = [];
 
