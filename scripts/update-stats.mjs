@@ -48,15 +48,26 @@ for (const article of articles) {
     const project = await response.json();
 
     if (
-        !project.stats ||
-        !Number.isInteger(project.stats.favorites) ||
-        !Number.isInteger(project.stats.loves)
+        !project.author ||
+        !project.history ||
+        typeof project.title !== "string" ||
+        typeof project.instructions !== "string" ||
+        typeof project.description !== "string" ||
+        typeof project.image !== "string" ||
+        !Number.isInteger(project.stats.views)
     ) {
-        throw new Error("反応数を取得できませんでした: " + article.id);
+        throw new Error("記事情報が不足しています: " + article.id);
     }
 
     article.favorites = project.stats.favorites;
     article.loves = project.stats.loves;
+    article.title = project.title;
+    article.body = project.instructions;
+    article.credits = project.description;
+    article.author = project.author.username;
+    article.image = project.image;
+    article.sharedAt = project.history.shared;
+    article.views = project.stats.views;
 
 }
 const jsonText = JSON.stringify(articles, null, 4) + "\n";
