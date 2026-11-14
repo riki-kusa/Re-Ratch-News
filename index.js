@@ -112,6 +112,10 @@ async function getArticles() {
         return new Date(b.sharedAt) - new Date(a.sharedAt);
     });
 
+    const popularArticles = articles.slice().sort(function(a, b) {
+        return (b.favorites * 2 + b.loves) - (a.favorites * 2 + a.loves);
+    });
+
     const article = articles[0];
 
     const titleElement = document.querySelector(".topic .news-title");
@@ -145,11 +149,6 @@ async function getArticles() {
         card.querySelector(".latest-date").textContent = date + " / " + item.author;
     
         latestList.append(card);
-    });
-    
-
-    const popularArticles = articles.slice().sort(function(a, b) {
-        return (b.favorites * 2 + b.loves) - (a.favorites * 2 + a.loves);
     });
     
     const popularGrid = document.querySelector(".popular-grid");
