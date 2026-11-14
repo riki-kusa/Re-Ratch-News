@@ -6,7 +6,9 @@
         "author": "riki-kusa",
         "image": "https://cdn2.scratch.mit.edu/get_image/project/1390883910_480x360.png",
         "sharedAt": "2026-10-12T23:56:05.000Z",
-        "credits": "記事制作：Re:Ratch広報チーム"
+        "credits": "記事制作：Re:Ratch広報チーム",
+        "favorites": 1,
+        "loves": 1
     },
     {
         "id": 1399301417,
@@ -15,7 +17,9 @@
         "author": "riki-kusa",
         "image": "https://cdn2.scratch.mit.edu/get_image/project/1399301417_480x360.png",
         "sharedAt": "2026-11-04T10:46:42.000Z",
-        "credits": "[ここにクレジットです。テスト1です。]\n(テスト1)\n\n©Re:Ratch Federation 2026 広報チーム\nサムネイル画像: @aaaaaa様\n情報出展: https://scratch.mit.edu/studios/51991760/\n(もし広報チームによる周期新聞の場合はここに、「広報チーム周期新聞と記載。」)\n"
+        "credits": "[ここにクレジットです。テスト1です。]\n(テスト1)\n\n©Re:Ratch Federation 2026 広報チーム\nサムネイル画像: @aaaaaa様\n情報出展: https://scratch.mit.edu/studios/51991760/\n(もし広報チームによる周期新聞の場合はここに、「広報チーム周期新聞と記載。」)\n",
+        "favorites": 1,
+        "loves": 0
     },
     {
         "id": 1399302174,
@@ -24,6 +28,8 @@
         "author": "riki-kusa",
         "image": "https://cdn2.scratch.mit.edu/get_image/project/1399302174_480x360.png",
         "sharedAt": "2026-11-04T10:47:28.000Z",
-        "credits": "[ここにクレジットです。テスト2です。]\n(テスト2)\n\n©Re:Ratch Federation 2026 広報チーム\nサムネイル画像: @iiiiiiiii様\n情報出展: https://scratch.mit.edu/studios/51991760/\n(もし広報チームによる周期新聞の場合はここに、「広報チーム周期新聞と記載。」)\n"
+        "credits": "[ここにクレジットです。テスト2です。]\n(テスト2)\n\n©Re:Ratch Federation 2026 広報チーム\nサムネイル画像: @iiiiiiiii様\n情報出展: https://scratch.mit.edu/studios/51991760/\n(もし広報チームによる周期新聞の場合はここに、「広報チーム周期新聞と記載。」)\n",
+        "favorites": 0,
+        "loves": 1
     }
 ]
