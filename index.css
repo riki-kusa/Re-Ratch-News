@@ -403,7 +403,7 @@ header {
 }
 
 .detail-meta {
-  margin-top: 15px;
+  margin-top: 10px;
   margin-bottom: 30px;
   font-size: 13px;
   color: #888;
@@ -416,6 +416,7 @@ header {
   height: auto;
   margin: 0 auto 35px;
   border-radius: 6px;
+  border-bottom: 3px solid black;
 }
 
 .detail-body {
