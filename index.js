@@ -147,6 +147,9 @@ async function getArticles() {
         latestList.append(card);
     });
     
+    const popularArticles = articles.slice().sort(function(a, b) {
+        return (b.favorites * 2 + b.loves) - (a.favorites * 2 + a.loves);
+    });
 
 }
 
