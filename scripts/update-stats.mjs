@@ -31,6 +31,9 @@ for (const studioProject of studioProjects) {
 
 console.log("未登録の作品ID:", newProjectIds);
 
+for (const id of newProjectIds) {
+    articles.push({ id: id });
+}
 
 for (const article of articles) {
 
