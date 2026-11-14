@@ -416,7 +416,6 @@ header {
   height: auto;
   margin: 0 auto 35px;
   border-radius: 6px;
-  border-bottom: 3px solid black;
 }
 
 .detail-body {
@@ -425,6 +424,7 @@ header {
   white-space: pre-wrap;
   overflow-wrap: anywhere;
   padding-bottom: 40px;
+  border-top: 3px solid black;
   border-bottom: 1px solid #ddd;
 }
 
