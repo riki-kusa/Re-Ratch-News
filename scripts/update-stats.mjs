@@ -32,6 +32,28 @@ while (true) {
     offset += 40;
 }
 
+const infoResponse = await fetch(
+    "https://api.scratch.mit.edu/studios/52054890"
+);
+
+if (!infoResponse.ok) {
+    throw new Error("スタジオ情報取得失敗: HTTP " + infoResponse.status);
+}
+
+const studioInfo = await infoResponse.json();
+const reportedCount = studioInfo.stats?.projects;
+
+if (!Number.isInteger(reportedCount)) {
+    throw new Error("スタジオの作品数を確認できません");
+}
+
+if (
+    (reportedCount < 100 && studioProjects.length !== reportedCount) ||
+    (reportedCount >= 100 && studioProjects.length < 100)
+) {
+    throw new Error("スタジオの作品数と取得件数が一致しません");
+}
+
 
 if (studioProjects.length === 0) {
     throw new Error("スタジオの取得結果が空のため、更新を停止します");
