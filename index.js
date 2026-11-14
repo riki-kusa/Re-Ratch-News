@@ -13,6 +13,8 @@ async function getArticles() {
             return String(article.id) === articleId;
         });
         
+        document.title = foundArticle.title + " | Re:Ratch News";
+
         console.log(foundArticle);
 
         const detailTitle = document.querySelector(".detail-title");
