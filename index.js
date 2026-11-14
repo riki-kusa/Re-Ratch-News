@@ -147,10 +147,36 @@ async function getArticles() {
         latestList.append(card);
     });
     
+
     const popularArticles = articles.slice().sort(function(a, b) {
         return (b.favorites * 2 + b.loves) - (a.favorites * 2 + a.loves);
     });
-
+    
+    const popularGrid = document.querySelector(".popular-grid");
+    const originalPopularCard = popularGrid.querySelector(".popular-card");
+    
+    popularGrid.replaceChildren();
+    
+    popularArticles.slice(0, 3).forEach(function(item) {
+    
+        const card = originalPopularCard.cloneNode(true);
+    
+        card.querySelector(".popular-title").textContent = item.title;
+        card.querySelector("img").src = item.image;
+    
+        const date = new Date(item.sharedAt).toLocaleDateString(
+            "ja-JP",
+            { timeZone: "Asia/Tokyo" }
+        );
+    
+        card.querySelector(".popular-date").textContent = date + " / " + item.author;
+    
+        card.href = "article/article.html?id=" + item.id;
+    
+        popularGrid.append(card);
+    
+    });
+    
 }
 
 getArticles();
