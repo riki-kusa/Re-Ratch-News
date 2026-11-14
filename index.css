@@ -388,12 +388,8 @@ header {
 }
 
 
-
-
-/* 記事詳細ページ */
-
 .article-detail {
-  max-width: 850px;
+  max-width: 1000px;
   margin: 0 auto 80px;
   padding: 35px 45px;
   border: 1px solid #e5e5e5;
