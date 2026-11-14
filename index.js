@@ -115,7 +115,6 @@ async function getArticles() {
     const popularArticles = articles.slice().sort(function(a, b) {
         return (b.favorites * 2 + b.loves) - (a.favorites * 2 + a.loves);
     });
-
     
     const start = Math.floor(popularArticles.length / 3);
     const end = Math.ceil(popularArticles.length * 2 / 3);
