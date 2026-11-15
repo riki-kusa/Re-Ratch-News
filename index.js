@@ -140,7 +140,7 @@ async function getArticles() {
     titleElement.textContent = article.title;
 
     const imageElement = document.querySelector(".topic .news-image");
-    isetArticleImage(imageElement, article.image, "kari.png");
+    setArticleImage(imageElement, article.image, "kari.png");
 
     const linkElement = document.querySelector(".topic .news-card");
     linkElement.href = "article/article.html?id=" + article.id;
