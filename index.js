@@ -31,7 +31,7 @@ async function getArticles() {
         detailTitle.textContent = foundArticle.title;
 
         const imageElement = document.querySelector(".detail-image");
-        imageElement.src = foundArticle.image;
+        setArticleImage(imageElement, foundArticle.image, "../kari.png");
 
         const detailBody = document.querySelector(".detail-body");
         detailBody.textContent = foundArticle.body;
