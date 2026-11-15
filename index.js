@@ -159,7 +159,7 @@ async function getArticles() {
     
         card.querySelector(".latest-title").textContent = item.title;
 
-        card.querySelector("img").src = item.image;
+        setArticleImage(card.querySelector("img"), item.image, "kari.png");
 
         card.href =  "article/article.html?id=" + item.id;
 
@@ -179,7 +179,7 @@ async function getArticles() {
         const card = originalPopularCard.cloneNode(true);
     
         card.querySelector(".popular-title").textContent = item.title;
-        card.querySelector("img").src = item.image;
+        setArticleImage(card.querySelector("img"), item.image, "kari.png");
     
         const date = new Date(item.sharedAt).toLocaleDateString(
             "ja-JP",
