@@ -74,7 +74,7 @@ async function getArticles() {
                 const card = sampleCard.cloneNode(true);
 
                 card.querySelector(".archive-title").textContent = item.title;
-                card.querySelector("img").src = item.image;
+                setArticleImage(card.querySelector("img"), item.image, "../kari.png");
 
                 const sharedDate = new Date(item.sharedAt).toLocaleDateString("ja-JP", {timeZone: "Asia/Tokyo"});
 
@@ -140,7 +140,7 @@ async function getArticles() {
     titleElement.textContent = article.title;
 
     const imageElement = document.querySelector(".topic .news-image");
-    imageElement.src = article.image;
+    isetArticleImage(imageElement, article.image, "kari.png");
 
     const linkElement = document.querySelector(".topic .news-card");
     linkElement.href = "article/article.html?id=" + article.id;
