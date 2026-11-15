@@ -1,4 +1,16 @@
 
+function setArticleImage(img, url, fallback) {
+
+    img.onerror = function() {
+        img.onerror = null;
+        img.src = fallback;
+    };
+
+    img.src = url;
+}
+
+
+
 async function getArticles() {
 
     if (document.body.dataset.page === "detail") {
