@@ -9,7 +9,6 @@ function setArticleImage(img, url, fallback) {
     img.src = url;
 }
 
-
 async function getArticles() {
 
     if (document.body.dataset.page === "detail") {
