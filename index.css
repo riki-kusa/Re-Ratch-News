@@ -414,6 +414,7 @@ header {
   width: 100%;
   max-width: 640px;
   height: auto;
+  aspect-ratio: 3 / 4;
   margin: 0 auto 35px;
   border-radius: 6px;
 }
