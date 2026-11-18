@@ -472,37 +472,6 @@ header {
     transition: opacity 0.2s ease;
 }
 
-  footer {
-    margin-top: 0;
-    border-top: 2px solid #ddd;
-    color: white;
-    height: 120px;
-    padding: 40px;
-    padding-bottom: 30px;
-    position: relative;
-  }
-  
-  .footer-title {
-    margin-top: 10px;
-    font-size: 30px;
-  }
-  
-  .footer-subtitle {
-    font-size: 15px;
-    padding-right: 10px;
-    color: #d6cebd;
-  }
-  
-  .footer-copymark {
-    position: absolute;
-    color: #d6cebd;
-    font-size: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-      
-  }
-
-
 
 
 @media screen and (max-width: 768px) {
