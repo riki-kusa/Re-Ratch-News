@@ -566,6 +566,77 @@ header {
 }
 
 
+
+
+/* 記事一覧全体 */
+.archive {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* 見出しと切り替えボタン */
+.archive .section-heading {
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.archive .section-heading h1 {
+  font-size: 28px;
+}
+
+.archive-tabs {
+  width: 100%;
+  margin: 0 0 10px;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.archive-tab {
+  font-size: 13px;
+}
+
+/* 記事の横並び */
+.archive-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 15px 0;
+}
+
+/* サムネイル */
+.archive-card img {
+  width: 110px;
+  flex: 0 0 110px;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* 文章部分 */
+.archive-info {
+  flex: 1;
+  min-width: 0;
+}
+
+/* タイトル */
+.archive-title {
+  font-size: 16px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+/* 概要 */
+.archive-desc {
+  font-size: 13px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+/* 日付 */
+.archive-date {
+  font-size: 11px;
+}
+
     
   .news-top {
     grid-template-columns: 1fr;
