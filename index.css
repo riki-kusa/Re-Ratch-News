@@ -474,6 +474,50 @@ header {
 
 @media screen and (max-width: 768px) {
 
+
+/* スマホ用トピック */
+.news-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  aspect-ratio: auto;
+  overflow: visible;
+  gap: 8px;
+}
+
+/* 画像 */
+.news-image {
+  position: static;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* 画像上のグラデーションを解除 */
+.news-card::after {
+  display: none;
+}
+
+/* 日付・投稿者 */
+.news-subtitle {
+  position: static;
+  color: #777777;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* トピックのタイトル */
+.news-title {
+  position: static;
+  color: #222222;
+  font-size: 20px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+
     
 /* スマホ用ヘッダー */
 header {
