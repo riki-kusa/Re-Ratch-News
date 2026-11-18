@@ -11,12 +11,13 @@
   
 body {
     font-family: 'Hiragino Kaku Gothic ProN W3', sans-serif;
+    background-color: #faf8f5;
 }
 
 main {
   max-width: 1500px;
-  margin: 50px auto 0;
-  padding: 0 22px;
+  margin: 0 auto;
+  padding: 50px 22px 60px;
   background-color: #faf8f5;
 }
 
