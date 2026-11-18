@@ -471,7 +471,7 @@ header {
 }
 
   footer {
-    margin-top: 50px;
+    margin-top: 0;
     border-top: 2px solid #ddd;
     color: white;
     height: 30px;
