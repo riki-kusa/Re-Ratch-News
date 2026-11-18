@@ -52,7 +52,7 @@ header {
     align-items:flex-end;
     background-color: #ffffff;
     margin-bottom: 20px;
-    margin-top: 20px;
+    padding-top: 20px;
   }
   
   .header-icon img {
