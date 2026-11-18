@@ -475,14 +475,14 @@ header {
     margin-top: 0;
     border-top: 2px solid #ddd;
     color: white;
-    height: 30px;
+    height: 120px;
     padding: 40px;
     padding-bottom: 5px;
     position: relative;
   }
   
   .footer-title {
-    margin-top: 5px;
+    margin-top: 20px;
     font-size: 30px;
   }
   
