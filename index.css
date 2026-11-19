@@ -473,6 +473,46 @@ header {
   color: white;
 }
 
+
+.detail-body blockquote {
+    border-left: 4px solid #999;
+    padding-left: 1em;
+    margin: 1em 0;
+    color: #555;
+}
+
+.detail-body pre {
+    background-color: #f3f3f3;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    white-space: pre;
+}
+
+.detail-body code {
+    font-family: monospace;
+}
+
+.detail-body :not(pre) > code {
+    background-color: #f3f3f3;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.detail-body table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.detail-body th,
+.detail-body td {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+
+
 .detail-body > * + * {
     margin-top: 1em;
 }
