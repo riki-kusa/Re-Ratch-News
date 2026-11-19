@@ -46,7 +46,7 @@ async function getArticles() {
 　　　　　detailBody.innerHTML = md.render(foundArticle.body);
 
         const detailcredits = document.querySelector(".detail-credits");
-        detailcredits.textContent = foundArticle.credits;
+        detailcredits.innerHTML = md.render(foundArticle.credits);
 
         const metaElement = document.querySelector(".detail-meta");
         const sharedDate = new Date(foundArticle.sharedAt).toLocaleDateString("ja-JP", {timeZone: "Asia/Tokyo"});
