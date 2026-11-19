@@ -473,6 +473,9 @@ header {
   color: white;
 }
 
+.detail-body > * + * {
+    margin-top: 1em;
+}
 
 .topic,
 .latest,
