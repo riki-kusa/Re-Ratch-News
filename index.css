@@ -458,7 +458,7 @@ header {
   color: #555;
   font-size: 14px;
   line-height: 1.8;
-  white-space: pre-wrap;
+  white-space: normal;
   overflow-wrap: anywhere;
   margin-bottom: 30px;
 }
@@ -503,6 +503,7 @@ header {
     background-color: #f3f3f3;
     padding: 2px 5px;
     border-radius: 3px;
+    color: #1f2328;
 }
 
 .detail-body table {
