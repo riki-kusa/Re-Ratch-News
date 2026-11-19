@@ -142,8 +142,17 @@ async function getArticles() {
 
     const topicCandidates = popularArticles.slice(start, end);
 
-    const article = topicCandidates[Math.floor(Math.random() * topicCandidates.length)];
+const period = Math.floor(
+    (Date.now() + 9 * 60 * 60 * 1000)
+    / (3 * 24 * 60 * 60 * 1000)
+);
 
+const random = Math.sin(period * 12.9898) * 43758.5453;
+const randomIndex = Math.floor(
+    (random - Math.floor(random)) * topicCandidates.length
+);
+
+const article = topicCandidates[randomIndex];
 
     const titleElement = document.querySelector(".topic .news-title");
     titleElement.textContent = article.title;
