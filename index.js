@@ -37,7 +37,8 @@ async function getArticles() {
             
         const md = window.markdownit({
            html: false,
-           linkify: false
+           linkify: false,
+           breaks: true
         });
 
 　　　　　md.disable("image");
