@@ -205,7 +205,7 @@ async function getArticles() {
     
 }
 
-const maintenanceMode = true;
+const maintenanceMode = false;
 
 if (maintenanceMode) {
     location.replace("/Re-Ratch-News/maintenance.html");
