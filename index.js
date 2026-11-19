@@ -33,8 +33,16 @@ async function getArticles() {
         const imageElement = document.querySelector(".detail-image");
         setArticleImage(imageElement, foundArticle.image, "../kari.png");
 
-        const detailBody = document.querySelector(".detail-body");
-        detailBody.textContent = foundArticle.body;
+        const detailBody = document.querySelector(".detail-body"). 
+            
+        const md = window.markdownit({
+           html: false,
+           linkify: false
+        });
+
+　　　　　md.disable("image");
+
+　　　　　detailBody.innerHTML = md.render(foundArticle.body);
 
         const detailcredits = document.querySelector(".detail-credits");
         detailcredits.textContent = foundArticle.credits;
