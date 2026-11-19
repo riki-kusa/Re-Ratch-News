@@ -485,21 +485,35 @@ header {
     color: #555;
 }
 
-.detail-body pre {
-    background-color: #f3f3f3;
-    padding: 15px;
-    border-radius: 5px;
-    overflow-x: auto;
-    white-space: pre;
-}
 
 .detail-body code {
     font-family: monospace;
-    color: #f6f8fa;
 }
+
+
+.detail-body pre {
+    background-color: #1f2328;
+    color: #f6f8fa;
+    padding: 15px;
+    border-radius: 6px;
+    overflow-x: auto;
+    white-space: pre;
+    line-height: 1.6;
+}
+
+
+.detail-body pre code {
+    color: inherit;
+    background: transparent;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+}
+
 
 .detail-body :not(pre) > code {
     background-color: #1f2328;
+    color: #f6f8fa;
     padding: 2px 5px;
     border-radius: 3px;
 }
