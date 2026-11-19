@@ -205,4 +205,10 @@ async function getArticles() {
     
 }
 
-getArticles();
+const maintenanceMode = true;
+
+if (maintenanceMode) {
+    location.replace("/Re-Ratch-News/maintenance.html");
+} else {
+    getArticles();
+}
