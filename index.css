@@ -435,11 +435,11 @@ header {
 }
 
 .detail-body h1:not(.detail-title) {
-    
+    color: #3B3B3B;
 }
 
 .detail-body a {
-    color: #990000;
+    color: #950101;
 }
 
 .detail-body ul {
@@ -515,7 +515,7 @@ header {
 
 
 
-.detail-body > * + * {
+.detail-body.detail-credits > * + * {
     margin-top: 1em;
 }
 
