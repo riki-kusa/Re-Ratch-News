@@ -495,15 +495,13 @@ header {
 
 .detail-body code {
     font-family: monospace;
-    background-color: #1f2328;
     color: #f6f8fa;
 }
 
 .detail-body :not(pre) > code {
-    background-color: #f3f3f3;
+    background-color: #1f2328;
     padding: 2px 5px;
     border-radius: 3px;
-    color: #1f2328;
 }
 
 .detail-body table {
