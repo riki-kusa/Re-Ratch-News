@@ -121,6 +121,43 @@ for (const article of articles) {
     article.views = project.stats.views;
 
 }
+
+// 日本時間を基準に3日単位の期間番号を生成
+const period = Math.floor(
+    (Date.now() + 9 * 60 * 60 * 1000)
+    / (3 * 24 * 60 * 60 * 1000)
+);
+
+// 人気順位を計算
+const ranked = [...articles].sort((a, b) =>
+    (b.favorites * 2 + b.loves) -
+    (a.favorites * 2 + a.loves)
+);
+
+// 中間3分の1を抽出
+const start = Math.floor(ranked.length / 3);
+const end = Math.ceil(ranked.length * 2 / 3);
+const candidates = ranked.slice(start, end);
+
+// 今の3日間で選ばれた記事を探す
+const previous = articles.find(a => a.topicPeriod === period);
+
+// 中間層に残っていれば維持、それ以外なら再抽選
+const selected =
+    previous && candidates.some(a => a.id === previous.id)
+        ? previous
+        : candidates[Math.floor(Math.random() * candidates.length)];
+
+// 古い選出情報を消す
+for (const article of articles) {
+    delete article.topicPeriod;
+}
+
+// 選ばれた記事に期間番号を保存
+if (selected) {
+    selected.topicPeriod = period;
+}
+
 const jsonText = JSON.stringify(articles, null, 4) + "\n";
 
 await writeFile("./articles.json", jsonText, "utf8");
