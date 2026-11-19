@@ -519,8 +519,7 @@ header {
 
 
 
-.detail-body > * + *,
-.detail-credits > * + * {
+.detail-body > * + * {
     margin-top: 1em;
 }
 
