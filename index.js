@@ -33,7 +33,7 @@ async function getArticles() {
         const imageElement = document.querySelector(".detail-image");
         setArticleImage(imageElement, foundArticle.image, "../kari.png");
 
-        const detailBody = document.querySelector(".detail-body"). 
+        const detailBody = document.querySelector(".detail-body");
             
         const md = window.markdownit({
            html: false,
