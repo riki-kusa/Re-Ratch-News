@@ -436,7 +436,7 @@ header {
 
 .detail-body h1:not(.detail-title) {
     color: #3B3B3B;
-    background: linear-gradient(transparent 70%, #a7d6ff 70%);
+    background: linear-gradient(transparent 70%, #950101 70%);
 }
 
 .detail-body a {
