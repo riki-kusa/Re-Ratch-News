@@ -555,21 +555,6 @@ header {
 }
 
 
-.scratch-frame {
-  display: inline-block;
-  background-color: #ffffff;
-  border: 3px solid #950101;
-  border-radius: 12px;
-  max-width: 100%;
-}
-
-.scratch-frame iframe {
-  display: block;
-  border: none;
-  max-width: 100%;
-}
-
-
 @media screen and (max-width: 768px) {
 
 
