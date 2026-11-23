@@ -206,7 +206,16 @@ const article = articles.find(a => a.topicPeriod !== undefined) ?? topicCandidat
 
 const maintenanceMode = false;
 
-if (maintenanceMode) {
+const params = new URLSearchParams(location.search);
+
+if (params.has("preview")) {
+    sessionStorage.setItem("previewMode", "true");
+}
+
+const previewMode =
+    sessionStorage.getItem("previewMode") === "true";
+
+if (maintenanceMode && !previewMode) {
     location.replace("/Re-Ratch-News/maintenance.html");
 } else {
     getArticles();
