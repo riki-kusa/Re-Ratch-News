@@ -221,7 +221,7 @@ const article = articles.find(a => a.topicPeriod !== undefined) ?? topicCandidat
     
 }
 
-const maintenanceMode = true;
+const maintenanceMode = false;
 
 const params = new URLSearchParams(location.search);
 
