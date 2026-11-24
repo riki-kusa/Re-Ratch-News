@@ -441,6 +441,11 @@ header {
     container-type: inline-size;
 }
 
+.embed-container iframe {
+    border-radius: 8px;
+    border: none;
+}
+
 .detail-image[hidden],
 .detail-embed[hidden] {
     display: none;
