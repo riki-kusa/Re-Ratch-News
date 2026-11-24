@@ -57,7 +57,9 @@ async function getArticles() {
             return String(article.id) === articleId;
         });
 
-        console.log(getSeriesName(foundArticle.credits));
+        const series = groupSeries(articles);
+
+        console.log(series);
         
         document.title = foundArticle.title + " | Re:Ratch News";
 
