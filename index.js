@@ -77,7 +77,7 @@ async function getArticles() {
 
           imageElement.hidden = true;
 
-          embedElement.src = "https://turbowarp.org/" + foundArticle.id + "/embed?addons=remove-curved-stage-border";
+          embedElement.src = "https://turbowarp.org/" + foundArticle.id + "/embed";
   
           embedElement.hidden = false;
  
