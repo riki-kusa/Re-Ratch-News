@@ -43,6 +43,27 @@ function groupSeries(articles) {
     return series;
 }
 
+function getSeriesList(series) {
+
+    const seriesList = [];
+
+    series.forEach(function(seriesArticles, name) {
+
+        const sorted = seriesArticles.slice().sort(function(a, b) {
+            return new Date(a.sharedAt) - new Date(b.sharedAt);
+        });
+
+        seriesList.push({
+            name: name,
+            image: sorted[0].image,
+            count: seriesArticles.length
+        });
+
+    });
+
+    return seriesList;
+}
+
 async function getArticles() {
 
     if (document.body.dataset.page === "detail") {
