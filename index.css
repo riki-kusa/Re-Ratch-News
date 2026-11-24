@@ -433,6 +433,11 @@ header {
     border-radius: 6px;
 }
 
+.detail-image[hidden],
+.detail-embed[hidden] {
+    display: none;
+}
+
 .detail-body {
   font-size: 16px;
   line-height: 2;
