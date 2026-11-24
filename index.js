@@ -9,6 +9,17 @@ function setArticleImage(img, url, fallback) {
     img.src = url;
 }
 
+function getSeriesName(credits) {
+
+    const result = credits.match(/\[SERIES:\s*([^\]]+)\]/);
+
+    if (result) {
+        return result[1].trim();
+    }
+
+    return null;
+}
+
 async function getArticles() {
 
     if (document.body.dataset.page === "detail") {
