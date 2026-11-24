@@ -77,10 +77,6 @@ async function getArticles() {
         const foundArticle = articles.find(function(article) {
             return String(article.id) === articleId;
         });
-
-        const seriesList = getSeriesList(series);
-
-        console.log(seriesList);
         
         document.title = foundArticle.title + " | Re:Ratch News";
 
