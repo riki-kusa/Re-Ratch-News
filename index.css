@@ -428,9 +428,17 @@ header {
     width: 100%;
     max-width: 800px;
     aspect-ratio: 482 / 412;
+    height: calc(75cqw + 50.5px);
     margin: 0 auto 35px;
     border: none;
     border-radius: 6px;
+}
+
+.embed-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    container-type: inline-size;
 }
 
 .detail-image[hidden],
