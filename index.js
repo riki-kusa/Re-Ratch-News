@@ -33,6 +33,8 @@ async function getArticles() {
         const foundArticle = articles.find(function(article) {
             return String(article.id) === articleId;
         });
+
+        console.log(getSeriesName(foundArticle.credits));
         
         document.title = foundArticle.title + " | Re:Ratch News";
 
