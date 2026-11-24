@@ -55,7 +55,9 @@ async function getArticles() {
 
 　　　　　md.disable("image");
 
-　　　　　detailBody.innerHTML = md.render(foundArticle.body);
+　　　　　detailBody.innerHTML = md.render(
+          foundArticle.body.replaceAll("[RERATCH-EMBED]", "")
+　　　　　);
 
         const detailcredits = document.querySelector(".detail-credits");
         detailcredits.innerHTML = md.render(foundArticle.credits);
