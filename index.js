@@ -78,9 +78,9 @@ async function getArticles() {
             return String(article.id) === articleId;
         });
 
-        const series = groupSeries(articles);
+        const seriesList = getSeriesList(series);
 
-        console.log(series);
+        console.log(seriesList);
         
         document.title = foundArticle.title + " | Re:Ratch News";
 
