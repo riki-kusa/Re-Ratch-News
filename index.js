@@ -20,6 +20,29 @@ function getSeriesName(credits) {
     return null;
 }
 
+function groupSeries(articles) {
+
+    const series = new Map();
+
+    articles.forEach(function(article) {
+
+        const name = getSeriesName(article.credits);
+
+        if (!name) {
+            return;
+        }
+
+        if (!series.has(name)) {
+            series.set(name, []);
+        }
+
+        series.get(name).push(article);
+
+    });
+
+    return series;
+}
+
 async function getArticles() {
 
     if (document.body.dataset.page === "detail") {
