@@ -220,7 +220,7 @@ const maintenanceMode = true;
 
 const params = new URLSearchParams(location.search);
 
-if (params.has("preview")) {
+if (params.has("riki-kusa")) {
     sessionStorage.setItem("previewMode", "true");
 }
 
