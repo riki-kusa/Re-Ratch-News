@@ -33,6 +33,18 @@ async function getArticles() {
         const imageElement = document.querySelector(".detail-image");
         setArticleImage(imageElement, foundArticle.image, "../kari.png");
 
+        const embedElement = document.querySelector(".detail-embed");
+
+        if (foundArticle.id === 1399302174) {
+
+          imageElement.hidden = true;
+
+          embedElement.src = "https://turbowarp.org/" + foundArticle.id + "/embed";
+  
+          embedElement.hidden = false;
+ 
+        }
+
         const detailBody = document.querySelector(".detail-body");
             
         const md = window.markdownit({
@@ -204,7 +216,7 @@ const article = articles.find(a => a.topicPeriod !== undefined) ?? topicCandidat
     
 }
 
-const maintenanceMode = false;
+const maintenanceMode = true;
 
 const params = new URLSearchParams(location.search);
 
