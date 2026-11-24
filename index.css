@@ -439,11 +439,14 @@ header {
     max-width: 800px;
     margin: 0 auto;
     container-type: inline-size;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .embed-container iframe {
     border-radius: 8px;
     border: none;
+    clip-path: inset(0 round 8px);
 }
 
 .detail-image[hidden],
