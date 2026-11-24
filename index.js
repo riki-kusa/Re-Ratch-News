@@ -35,7 +35,7 @@ async function getArticles() {
 
         const embedElement = document.querySelector(".detail-embed");
 
-        if (foundArticle.id === 1399302174) {
+        if (foundArticle.body.startsWith("[RERATCH-EMBED]")) {
 
           imageElement.hidden = true;
 
