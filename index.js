@@ -182,9 +182,10 @@ async function getArticles() {
 
             const SeriesElement = card.querySelector(".archive-title h1");
             const ArchiveElement = card.querySelector(".archive-title h3");
+            SeriesElement.hidden = false;
+            ArchiveElement.hidden = true;
+            SeriesElement.textContent = item.name;
             
-            card.querySelector(".archive-title").textContent = item.name;
-            imageElement.hidden = true;
 
             setArticleImage(card.querySelector("img"), item.image, "../kari.png");
 
