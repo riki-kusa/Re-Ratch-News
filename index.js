@@ -238,8 +238,22 @@ async function getArticles() {
             return; 
           }
 
-          document.querySelector(".section-heading h1").textContent = seriesName;
+          const seriesInfo = seriesList.find(function(item) {
+            return item.name === seriesName;
+          });
 
+          document.querySelector(".series-title").textContent = seriesInfo.name;
+
+          document.querySelector(".series-count").textContent =
+          "全" + seriesInfo.count + "件の記事";
+
+          setArticleImage(
+            document.querySelector(".series-cover"),
+            seriesInfo.image,
+            "../kari.png"
+          );
+
+          document.querySelector(".series-overview").hidden = false;
           document.title = seriesName + " | Re:Ratch News";
 
           showArchive(seriesArticles.slice().sort(function(a, b) {
