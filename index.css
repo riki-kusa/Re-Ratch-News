@@ -369,6 +369,11 @@ header {
   line-height: 1.5;
 }
 
+.series-card .archive-title {
+    font-size: 26px;
+    font-weight: bold;
+}
+
 .archive-desc {
   font-size: 15px;
   color: rgb(59, 59, 59);
