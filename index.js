@@ -132,6 +132,9 @@ async function getArticles() {
         const response = await fetch("../articles.json");
         const articles = await response.json();
 
+        const series = groupSeries(articles);
+        const seriesList = getSeriesList(series);
+
         const sortedArticles = articles.slice().sort(function(a, b) {
             return new Date(b.sharedAt) - new Date(a.sharedAt);
         });
