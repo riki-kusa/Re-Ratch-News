@@ -439,6 +439,8 @@ header {
     border-radius: 6px;
 }
 
+
+
 .embed-container {
     width: 100%;
     max-width: 800px;
@@ -457,6 +459,25 @@ header {
 .detail-image[hidden],
 .detail-embed[hidden] {
     display: none;
+}
+
+.detail-series {
+    margin-bottom: 25px;
+    padding: 12px 15px;
+    background-color: #f5f5f5;
+    border-left: 4px solid #950101;
+    border-radius: 4px;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.detail-series-link {
+    color: #950101;
+    font-weight: bold;
+}
+
+.detail-series-link:hover {
+    text-decoration: underline;
 }
 
 .detail-body {
