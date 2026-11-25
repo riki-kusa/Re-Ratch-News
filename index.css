@@ -611,24 +611,56 @@ header {
 }
 
 .series-card {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 10px;
-    padding: 10px 0;
+    position: relative;
+    display: block;
+    padding: 0;
     border: none;
     min-width: 0;
+    border-radius: 8px;
+}
+
+.series-card .archive-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 35px 15px 15px;
+
+    background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0, 0, 0, 0.85)
+    );
+
+border-radius: 0 0 8px 8px;
+}
+
+.series-card .archive-title {
+    color: white;
+    font-size: 20px;
+    overflow-wrap: anywhere;
+}
+
+.series-card .archive-desc {
+    color: #eeeeee;
+    font-size: 13px;
+    margin-left: 0;
+}
+
+.series-card:hover .archive-title {
+    color: white;
 }
 
 .series-card img {
+    display: block;
     width: 100%;
-    flex: none;
+    height: auto;
     aspect-ratio: 4 / 3;
     object-fit: cover;
     border-radius: 8px;
     box-shadow:
-        0 -8px 0 -1px #c8c8c8,
-        0 -16px 0 -3px #e0e0e0;
+    0 -8px 0 -1px #c8c8c8,
+    0 -16px 0 -3px #e0e0e0;
 }
 
 .series-card .archive-title {
