@@ -174,27 +174,26 @@ async function getArticles() {
 
         function showSeries(seriesList) {
 
-    archiveList.replaceChildren();
+          archiveList.replaceChildren();
 
-    seriesList.forEach(function(item) {
+          seriesList.forEach(function(item) {
 
-        const card = sampleCard.cloneNode(true);
+            const card = sampleCard.cloneNode(true);
 
-        card.querySelector(".archive-title").textContent = item.name;
+            card.querySelector(".archive-title").textContent = item.name;
 
-        setArticleImage(card.querySelector("img"), item.image, "../kari.png");
+            setArticleImage(card.querySelector("img"), item.image, "../kari.png");
 
-        card.querySelector(".archive-desc").textContent =
-            item.count + "件の記事";
+            card.querySelector(".archive-desc").textContent = item.count + "件の記事";
 
-        card.querySelector(".archive-date").textContent = "";
+            card.querySelector(".archive-date").textContent = "";
 
-        card.removeAttribute("href");
+            card.removeAttribute("href");
 
-        archiveList.append(card);
+            archiveList.append(card);
 
-      });
-   }
+         });
+       }
             
         showArchive(sortedArticles);
         
