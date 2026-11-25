@@ -191,7 +191,8 @@ async function getArticles() {
 
             card.querySelector(".archive-date").textContent = "";
 
-            card.removeAttribute("href");
+            card.href = "../series/series.html?name=" +
+            encodeURIComponent(item.name);
 
             archiveList.append(card);
 
