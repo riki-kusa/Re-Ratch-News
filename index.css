@@ -439,14 +439,14 @@ header {
     max-width: 800px;
     margin: 0 auto;
     container-type: inline-size;
-    border-radius: 8px;
+    border-radius: 10px;
     overflow: hidden;
 }
 
 .embed-container iframe {
-    border-radius: 8px;
+    border-radius: 10px;
     border: none;
-    clip-path: inset(0 round 8px);
+    clip-path: inset(0 round 10px);
 }
 
 .detail-image[hidden],
@@ -474,13 +474,18 @@ header {
 }
 
 .detail-body h2 {
-  color: #3B3B3B;
   padding: 0.25em 0.5em;/*上下 左右の余白*/
   background: transparent;/*背景透明に*/
   border-left: solid 5px #ba0202;/*左線*/
 }
  
-
+.detail-body h2,
+.detail-body h3,
+.detail-body h4,
+.detail-body h5,
+.detail-body h6 {
+    color: #3B3B3B;
+}
 
 .detail-body a {
     color: #950101;
