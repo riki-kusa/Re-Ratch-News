@@ -194,7 +194,9 @@ async function getArticles() {
 
         function showSeries(seriesList) {
 
-          archiveList.replaceChildren();
+   　　　　archiveList.classList.add("series-grid");
+
+    　　　 archiveList.replaceChildren();
 
           seriesList.forEach(function(item) {
 
