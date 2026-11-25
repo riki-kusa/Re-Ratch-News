@@ -627,8 +627,8 @@ header {
     object-fit: cover;
     border-radius: 8px;
     box-shadow:
-        0 -4px 0 -1px #c8c8c8,
-        0 -8px 0 -3px #e0e0e0;
+        0 -8px 0 -1px #c8c8c8,
+        0 -16px 0 -3px #e0e0e0;
 }
 
 .series-card .archive-title {
