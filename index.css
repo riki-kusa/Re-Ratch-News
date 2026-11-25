@@ -669,12 +669,6 @@ border-radius: 0 0 8px 8px;
     overflow-wrap: anywhere;
 }
 
-.series-card .archive-desc {
-    font-size: 13px;
-    color: #777;
-    margin-left: 0;
-}
-
 .series-card .archive-date {
     display: none;
 }
