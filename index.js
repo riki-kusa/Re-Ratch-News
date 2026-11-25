@@ -212,9 +212,17 @@ async function getArticles() {
                 button.setAttribute("aria-pressed", "true");
         
                 if (button.dataset.mode === "latest") {
-                    showArchive(sortedArticles);
-                } else {
-                    showArchive(popularArticles);
+
+                  showArchive(sortedArticles);
+
+                } else if (button.dataset.mode === "popular") {
+
+                  showArchive(popularArticles);
+
+                } else if (button.dataset.mode === "series") {
+
+                  showSeries(seriesList);
+
                 }
         
             });
