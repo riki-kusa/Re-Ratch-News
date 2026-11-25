@@ -77,6 +77,23 @@ async function getArticles() {
         const foundArticle = articles.find(function(article) {
             return String(article.id) === articleId;
         });
+
+        const seriesName = getSeriesName(foundArticle.credits);
+
+        if (seriesName) {
+
+         const seriesElement = document.querySelector(".detail-series");
+
+         const seriesLink = document.querySelector(".detail-series-link");
+
+         seriesLink.textContent = seriesName;
+
+         seriesLink.href = "../series/series.html?name=" +
+         encodeURIComponent(seriesName);
+
+         seriesElement.hidden = false;
+
+         }
         
         document.title = foundArticle.title + " | Re:Ratch News";
 
