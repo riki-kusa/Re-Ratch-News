@@ -201,6 +201,30 @@ async function getArticles() {
        }
             
         showArchive(sortedArticles);
+
+        if (document.body.dataset.page === "series") {
+
+          const params = new URLSearchParams(location.search);
+
+          const seriesName = params.get("name");
+
+          const seriesArticles = series.get(seriesName);
+
+          if (!seriesArticles) {
+            archiveList.textContent = "シリーズが見つかりません。";
+            return; 
+          }
+
+          document.querySelector(".section-heading h1").textContent = seriesName;
+
+          document.title = seriesName + " | Re:Ratch News";
+
+          showArchive(seriesArticles.slice().sort(function(a, b) {
+          return new Date(b.sharedAt) - new Date(a.sharedAt);
+          }));
+
+          return;
+       }
         
         const archiveTabs = document.querySelectorAll(".archive-tab");
 
