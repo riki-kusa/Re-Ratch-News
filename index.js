@@ -132,7 +132,9 @@ async function getArticles() {
 　　　　　);
 
         const detailcredits = document.querySelector(".detail-credits");
-        detailcredits.innerHTML = md.render(foundArticle.credits);
+        detailcredits.innerHTML = md.render(
+          foundArticle.credits.replace(/\[SERIES:\s*([^\]]+)\]/g, "")
+        );
 
         const metaElement = document.querySelector(".detail-meta");
         const sharedDate = new Date(foundArticle.sharedAt).toLocaleDateString("ja-JP", {timeZone: "Asia/Tokyo"});
