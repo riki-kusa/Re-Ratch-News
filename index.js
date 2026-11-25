@@ -171,6 +171,30 @@ async function getArticles() {
 
             });
         }
+
+        function showSeries(seriesList) {
+
+    archiveList.replaceChildren();
+
+    seriesList.forEach(function(item) {
+
+        const card = sampleCard.cloneNode(true);
+
+        card.querySelector(".archive-title").textContent = item.name;
+
+        setArticleImage(card.querySelector("img"), item.image, "../kari.png");
+
+        card.querySelector(".archive-desc").textContent =
+            item.count + "件の記事";
+
+        card.querySelector(".archive-date").textContent = "";
+
+        card.removeAttribute("href");
+
+        archiveList.append(card);
+
+      });
+   }
             
         showArchive(sortedArticles);
         
@@ -198,6 +222,8 @@ async function getArticles() {
         
         });
 
+        
+        
         return;
     }
 
@@ -217,7 +243,7 @@ async function getArticles() {
 
     const topicCandidates = popularArticles.slice(start, end);
 
-const article = articles.find(a => a.topicPeriod !== undefined) ?? topicCandidates[0];
+    const article = articles.find(a => a.topicPeriod !== undefined) ?? topicCandidates[0];
 
     const titleElement = document.querySelector(".topic .news-title");
     titleElement.textContent = article.title;
