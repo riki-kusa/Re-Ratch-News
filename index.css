@@ -603,6 +603,49 @@ header {
     text-align: left;
 }
 
+.series-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 30px 24px;
+    padding-top: 25px;
+}
+
+.series-card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 10px 0;
+    border: none;
+    min-width: 0;
+}
+
+.series-card img {
+    width: 100%;
+    flex: none;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow:
+        0 -4px 0 -1px #c8c8c8,
+        0 -8px 0 -3px #e0e0e0;
+}
+
+.series-card .archive-title {
+    font-size: 20px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.series-card .archive-desc {
+    font-size: 13px;
+    color: #777;
+    margin-left: 0;
+}
+
+.series-card .archive-date {
+    display: none;
+}
 
 
 .detail-body > * + * {
