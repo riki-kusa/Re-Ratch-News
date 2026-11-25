@@ -127,7 +127,8 @@ async function getArticles() {
         return;
     }
 
-    if (document.body.dataset.page === "archive") {
+    if (document.body.dataset.page === "archive" ||
+    document.body.dataset.page === "series") { 
 
         const response = await fetch("../articles.json");
         const articles = await response.json();
