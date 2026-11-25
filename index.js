@@ -180,11 +180,9 @@ async function getArticles() {
 
             const card = sampleCard.cloneNode(true);
 
-            const SeriesElement = card.querySelector(".archive-title h1");
-            const ArchiveElement = card.querySelector(".archive-title h3");
-            SeriesElement.hidden = false;
-            ArchiveElement.hidden = true;
-            SeriesElement.textContent = item.name;
+　　　　　　　　card.classList.add("series-card");
+
+            card.querySelector(".archive-title").textContent = item.name;
             
 
             setArticleImage(card.querySelector("img"), item.image, "../kari.png");
