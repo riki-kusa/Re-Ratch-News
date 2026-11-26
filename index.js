@@ -213,6 +213,17 @@ async function getArticles() {
 
             card.querySelector(".archive-desc").textContent = item.count + "件の記事";
 
+            const thumbnail = card.querySelector("img");
+            const count = card.querySelector(".archive-desc");
+
+            const thumbnailContainer = document.createElement("div");
+
+            thumbnailContainer.classList.add("series-thumbnail");
+
+            thumbnail.before(thumbnailContainer);
+
+            thumbnailContainer.append(thumbnail, count);
+
             card.querySelector(".archive-date").textContent = "";
 
             card.href = "../series/series.html?name=" +
