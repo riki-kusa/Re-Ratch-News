@@ -247,18 +247,48 @@ async function getArticles() {
           document.querySelector(".series-count").textContent =
           "全" + seriesInfo.count + "件の記事";
 
-          setArticleImage(
-            document.querySelector(".series-cover"),
-            seriesInfo.image,
-            "../kari.png"
-          );
+         const seriesCover = document.querySelector(".series-cover");
+
+         const seriesOverview = document.querySelector(".series-overview");
+
+         seriesCover.addEventListener("load", function() {
+
+           seriesOverview.style.setProperty(
+             "--series-background",
+            `url("${seriesCover.src}")`
+           );
+
+         });
+
+         setArticleImage(
+          seriesCover,
+          seriesInfo.image,
+          "../kari.png" 
+         );
 
           document.querySelector(".series-overview").hidden = false;
           document.title = seriesName + " | Re:Ratch News";
 
-          showArchive(seriesArticles.slice().sort(function(a, b) {
-          return new Date(b.sharedAt) - new Date(a.sharedAt);
-          }));
+          const seriesSort = document.querySelector(".series-sort");
+
+          function sortSeries() {
+
+           const sorted = seriesArticles.slice().sort(function(a, b) {
+
+             if (seriesSort.value === "old") {
+               return new Date(a.sharedAt) - new Date(b.sharedAt);
+             } else {
+               return new Date(b.sharedAt) - new Date(a.sharedAt);
+             }
+
+          });
+
+         showArchive(sorted);
+}
+
+seriesSort.addEventListener("change", sortSeries);
+
+sortSeries();
 
           return;
        }
