@@ -6,3 +6,7 @@ async function getTutorial() {
     console.log(content);
 
 }
+
+const md = window.markdownit();
+
+const html = md.render(content);
