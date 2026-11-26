@@ -158,31 +158,40 @@ header {
 }
 
 .archive-tabs {
-  display: flex;
-  margin-left: auto;
-  gap: 10px;
-  margin: 10px 5px;
+    display: flex;
+    gap: 16px;
+    margin: 0 0 8px auto;
+    flex-wrap: wrap;
 }
 
 .archive-tab {
-  padding: 6px 12px;
-  border: 1px solid rgb(213, 213, 213);
-  background-color: white;
-  color: black;
-  cursor: pointer;
-  font: inherit;
-  border-radius: 5px;
-  transition: transform 0.4s ease;
+    padding: 8px 4px;
+    border: none;
+    border-bottom: 2px solid transparent;
+    border-radius: 0;
+
+    background-color: transparent;
+    color: #666;
+
+    font: inherit;
+    cursor: pointer;
+
+    transition: color 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .archive-tab:hover {
-  transform: scale(1.02);
+    color: #950101;
 }
 
 .archive-tab.is-active {
-  background-color: #333;
-  color: white;
-  border-color: #333;
+    color: #950101;
+    border-bottom-color: #950101;
+}
+
+.archive-tab:focus-visible {
+    outline: 2px solid #950101;
+    outline-offset: 3px;
 }
 
 .news-card {
@@ -958,10 +967,10 @@ header {
 }
 
 .archive-tabs {
-  width: 100%;
-  margin: 0 0 10px;
-  gap: 8px;
-  flex-wrap: wrap;
+    width: 100%;
+    margin: 0 0 8px;
+    gap: 16px;
+    flex-wrap: wrap;
 }
 
 .archive-tab {
