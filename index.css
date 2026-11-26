@@ -690,8 +690,8 @@ header {
     object-fit: cover;
     border-radius: 8px;
     box-shadow:
-    0 -8px 0 -3px #c8c8c8,
-    0 -16px 0 -6px #e0e0e0;
+    0 -10px 0 -4.5px #c8c8c8,
+    0 -20px 0 -9px #e0e0e0;
 }
 
 .series-card .archive-date {
