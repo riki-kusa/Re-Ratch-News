@@ -615,7 +615,7 @@ header {
     overflow-wrap: anywhere;
 }
 
-.series-card .archive-desc {
+.series-card .series-thumbnail .archive-desc {
     position: absolute;
     bottom: 8px;
     right: 8px;
@@ -625,10 +625,12 @@ header {
     color: white;
     font-size: 12px;
     border-radius: 4px;
+    z-index: 1;
 }
 
 .series-thumbnail {
     position: relative;
+    width: 100%;
 }
 
 .series-card:hover .archive-title {
@@ -647,7 +649,7 @@ header {
     cursor: pointer;
 }
 
-.series-card img {
+.series-card .series-thumbnail img {
     display: block;
     width: 100%;
     height: auto;
@@ -698,7 +700,7 @@ header {
     background-size: cover;
     background-position: center;
 
-    filter: blur(45px);
+    filter: blur(24px);
     transform: scale(1.25);
 
     z-index: -2;
@@ -710,10 +712,11 @@ header {
     inset: 0;
 
     background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.8) 75%,
-        #181818
+      to bottom,
+      rgba(0, 0, 0, 0.05) 0%,
+      rgba(0, 0, 0, 0.15) 35%,
+      rgba(0, 0, 0, 0.55) 65%,
+      rgba(0, 0, 0, 0.60) 100%
     );
 
     z-index: -1;
@@ -754,25 +757,6 @@ header {
 .series-information {
     flex: 1;
     min-width: 0;
-}
-
-.series-information span {
-    color: #950101;
-    font-size: 13px;
-    letter-spacing: 2px;
-    font-weight: bold;
-}
-
-.series-title {
-    font-size: 36px;
-    line-height: 1.4;
-    margin: 12px 0;
-    overflow-wrap: anywhere;
-}
-
-.series-count {
-    color: #777;
-    font-size: 14px;
 }
 
 .series-articles {
@@ -1047,10 +1031,11 @@ header {
       gap: 25px;
     }
 
-    .series-overview {
-      position: static;
-      padding: 18px;
-      gap: 18px;
+   .series-overview {
+    position: relative;
+    top: auto;
+    padding: 18px;
+    gap: 18px;
     }
 
     .series-cover {
