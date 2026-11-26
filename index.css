@@ -785,6 +785,10 @@ header {
 .series-count {
     color: #f0f0f0;
     font-size: 14px;
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .series-count::before {
