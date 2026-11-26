@@ -593,7 +593,7 @@ header {
     padding-top: 25px;
 }
 
-.series-card {
+.archive-card.series-card {
     position: relative;
     display: block;
     padding: 0;
@@ -616,9 +616,19 @@ header {
 }
 
 .series-card .archive-desc {
-    color: #777;
-    font-size: 13px;
-    margin-left: 0;
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    margin: 0;
+    padding: 4px 8px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+.series-thumbnail {
+    position: relative;
 }
 
 .series-card:hover .archive-title {
@@ -635,12 +645,6 @@ header {
     box-shadow:
     0 -8px 0 -3px #c8c8c8,
     0 -16px 0 -6px #e0e0e0;
-}
-
-.series-card .archive-title {
-    font-size: 20px;
-    line-height: 1.5;
-    overflow-wrap: anywhere;
 }
 
 .series-card .archive-date {
