@@ -642,6 +642,18 @@ header {
     font-size: 12px;
     border-radius: 4px;
     z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.series-card .series-thumbnail .archive-desc::before {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 14px;
+    background: url("./layers.svg") center / contain no-repeat;
+    flex-shrink: 0;
 }
 
 .series-thumbnail {
