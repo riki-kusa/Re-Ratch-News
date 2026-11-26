@@ -21,6 +21,7 @@ main {
     max-width: 1500px;
     margin: 0 auto;
     padding: 48px var(--page-gutter) 64px;
+    display: flex;
 }
 
 ul {
@@ -130,21 +131,18 @@ header {
   min-width: 0;
 }
 
-.main {
-  display: flex;
-}
-
 .anchor-link {
     margin: 20px 20px 20px 40px;
     font-size: 10px;
     transition: opacity 0.2s;
+    color: #a9a9a9;
 }
 
 .anchor-link:hover {
     transform: translateX(8px);
 }
 
-.anchor-link child {
+.anchor-link .child {
     margin-left: 15px;
 }
 
