@@ -593,7 +593,7 @@ header {
     text-align: left;
 }
 
-.archive series-layout {
+.archive.series-layout {
     margin-top: 30px;
 }
 
@@ -655,7 +655,7 @@ header {
 
 .series-sort {
     margin-left: auto;
-    padding: 7px 28px 7px 8px;
+    padding: 7px 28px 2px 8px;
 
     appearance: none;
     -webkit-appearance: none;
