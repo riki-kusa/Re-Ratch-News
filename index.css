@@ -652,7 +652,7 @@ header {
     display: block;
     width: 14px;
     height: 14px;
-    background: url("./layers.svg") center / contain no-repeat;
+    background: url("./Lucide-icon/list.svg") center / contain no-repeat;
     flex-shrink: 0;
 }
 
