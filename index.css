@@ -787,6 +787,15 @@ header {
     font-size: 14px;
 }
 
+.series-count::before {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 14px;
+    background: url("./Lucide-icon/list.svg") center / contain no-repeat;
+    flex-shrink: 0;
+}
+
 .series-overview[hidden] {
     display: none;
 }
