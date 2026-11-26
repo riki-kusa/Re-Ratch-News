@@ -1,3 +1,7 @@
+:root {
+    --page-gutter: clamp(24px, 4vw, 56px);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -14,9 +18,9 @@ body {
 }
 
 main {
-  max-width: 1500px;
-  margin: 0 auto;
-  padding: 50px 22px 60px;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 48px var(--page-gutter) 64px;
 }
 
 ul {
@@ -46,25 +50,26 @@ header a img:hover {
 
 header {
     position: relative;
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-end;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
     background-color: #ffffff;
-    padding-top: 20px;
-  }
+
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px var(--page-gutter) 0;
+}
   
-  .header-icon img {
+.header-icon img {
     margin-top: 17px;
-    margin-left: 57px;
     width: auto;
     height: 85px;
-  }
+}
 
-  .menu {
+.menu {
     display: flex;
-    margin-right: 50px; 
     transform: translateY(-20px);
-  }
+}
   
   .main-menu {
     border-left: 1.5px solid rgb(213, 213, 213);
@@ -97,13 +102,11 @@ header {
     color: rgb(153, 0, 0);
   }
 
-  .news-top {
+.news-top {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 25px;
-    margin-top: 20px;
-    margin-left: 40px;
-  }
+    gap: 24px;
+}
 
 .topic {
   min-width: 0;
@@ -285,7 +288,7 @@ header {
 }
 
 .popular {
-    margin: 50px 30px 40px 40px;
+    margin-top: 48px;
 }
 
 .popular-grid {
@@ -329,11 +332,6 @@ header {
 
 .topic:hover{
   opacity: 0.8;
-}
-
-.archive {
-  margin-left: 30px;
-  margin-right: 30px;
 }
 
 .archive-card {
@@ -845,6 +843,10 @@ body[data-page="series"] .archive-desc {
 
 @media screen and (max-width: 768px) {
 
+:root {
+    --page-gutter: 20px;
+}
+
 
 /* スマホ用トピック */
 .news-card {
@@ -895,7 +897,7 @@ header {
     flex-direction: column;
     align-items: center;
     gap: 12px;
-    padding: 15px 12px;
+    padding: 15px var(--page-gutter);
     margin: 0;
 }
 
