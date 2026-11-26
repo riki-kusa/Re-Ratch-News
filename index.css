@@ -608,15 +608,20 @@ header {
 
 .series-card .archive-info {
     position: static;
-    padding: 10px 2px 0;
+    padding: 6px 0 0;
 }
 
 .series-card .archive-title {
     color: #222;
-    font-size: 18px;
-    font-weight: bold;
-    line-height: 1.5;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.4;
     overflow-wrap: anywhere;
+}
+
+.series-card:hover .archive-title {
+    color: #950101;
+    opacity: 1;
 }
 
 .series-card .series-thumbnail .archive-desc {
@@ -733,7 +738,7 @@ header {
     inset: 0;
 
     background: linear-gradient(
-      to 160deg,
+      160deg,
       rgba(0, 0, 0, 0.05) 0%,
       rgba(0, 0, 0, 0.15) 35%,
       rgba(0, 0, 0, 0.55) 65%,
