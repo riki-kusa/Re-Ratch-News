@@ -639,15 +639,32 @@ header {
 
 .series-sort {
     margin-left: auto;
-    padding: 7px 12px 15px 12px;
-    border-bottom: 1px solid #ddd;
-    border-radius: 6px;
-    background-color: white;
+    padding: 7px 28px 7px 8px;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    border: none;
+    border-bottom: 1px solid #888;
+    border-radius: 0;
+
+    background-color: transparent;
     color: #333;
+
     font: inherit;
     font-size: 13px;
     cursor: pointer;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1 L6 6 L11 1' fill='none' stroke='%23666' stroke-width='1.5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
 }
+
+.series-sort:focus-visible {
+    outline: 2px solid #950101;
+    outline-offset: 3px;
+}
+
 
 .series-card .series-thumbnail img {
     display: block;
@@ -712,7 +729,7 @@ header {
     inset: 0;
 
     background: linear-gradient(
-      to bottom,
+      to 160deg,
       rgba(0, 0, 0, 0.05) 0%,
       rgba(0, 0, 0, 0.15) 35%,
       rgba(0, 0, 0, 0.55) 65%,
