@@ -603,37 +603,26 @@ header {
 }
 
 .series-card .archive-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 35px 15px 15px;
-
-    background: linear-gradient(
-    to bottom,
-    transparent,
-    rgba(0, 0, 0, 0.5)
-    );
-
-border-radius: 0 0 8px 8px;
+    position: static;
+    padding: 10px 2px 0;
 }
 
 .series-card .archive-title {
-    color: white;
-    font-size: 20px;
+    color: #222;
+    font-size: 18px;
     font-weight: bold;
     line-height: 1.5;
     overflow-wrap: anywhere;
 }
 
 .series-card .archive-desc {
-    color: white;
+    color: #777;
     font-size: 13px;
     margin-left: 0;
 }
 
 .series-card:hover .archive-title {
-    color: white;
+    color: #950101;
 }
 
 .series-card img {
