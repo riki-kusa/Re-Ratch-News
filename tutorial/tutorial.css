@@ -1,6 +1,7 @@
-.main {
-  gap: 35px;
-  align-items: flex-start;
+main {
+    display: flex;
+    gap: 35px;
+    align-items: flex-start;
 }
 
 h1 {
