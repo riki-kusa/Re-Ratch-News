@@ -26,7 +26,7 @@ h2 {
 }
 
 .anchor-link:hover {
-    transform: translateX(8px);
+    transform: translateX(7px);
 }
 
 .anchor-link.parent {
@@ -34,7 +34,7 @@ h2 {
 }
 
 .anchor-link.child {
-    margin-left: 35px;
+    margin-left: 43px;
     font-size: 15px;
     color: #a9a9a9;
 }
