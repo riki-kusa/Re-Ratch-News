@@ -22,7 +22,7 @@ h2 {
     display: block;
     margin: 20px 20px 20px 40px;
     font-size: 20px;
-    transition: opacity 0.2s;
+    transition: transform 0.2s;
 }
 
 .anchor-link:hover {
@@ -30,13 +30,13 @@ h2 {
 }
 
 .anchor-link.parent {
-    color: #a9a9a9;
+    color: #6b6b6b;
 }
 
 .anchor-link.child {
     margin-left: 35px;
     font-size: 15px;
-    color: #e6e3e3;
+    color: #a9a9a9;
 }
 
 .Persistent-Drawer {
