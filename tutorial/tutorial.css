@@ -136,15 +136,20 @@ header {
     margin: 20px 20px 20px 40px;
     font-size: 20px;
     transition: opacity 0.2s;
-    color: #a9a9a9;
 }
 
 .anchor-link:hover {
     transform: translateX(8px);
 }
 
+.anchor-link.parent {
+    color: #a9a9a9;
+}
+
 .anchor-link.child {
     margin-left: 15px;
+    font-size: 15px;
+    color: #e6e3e3;
 }
 
 .Main-Content {
