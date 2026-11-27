@@ -20,23 +20,41 @@ h2 {
 
 .anchor-link {
     display: block;
-    margin: 20px 20px 20px 40px;
-    font-size: 20px;
-    transition: transform 0.2s;
+    margin: 0;
+    padding: 8px 10px;
+    font-size: 16px;
+    transition: color 0.25s, transform 0.25s;
 }
 
 .anchor-link:hover {
     transform: translateX(7px);
+    color: #950101;
 }
 
 .anchor-link.parent {
-    color: #6b6b6b;
+    color: #333333;
+    font-weight: bold;
 }
 
 .anchor-link.child {
-    margin-left: 43px;
-    font-size: 15px;
-    color: #a9a9a9;
+    margin-left: 15px;
+    border-left: 1px solid #cccccc;
+    font-size: 14px;
+    color: #666666;
+}
+
+.drawer-heading {
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 10px;
+    margin-bottom: 12px;
+}
+
+.drawer-heading span {
+    font-size: 11px;
+    color: #999999;
+    margin-left: 8px;
 }
 
 .Persistent-Drawer {
