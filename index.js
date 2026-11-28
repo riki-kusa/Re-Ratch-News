@@ -306,17 +306,27 @@ sortSeries();
 
        const searchElement = document.querySelector(".search");
 
-      searchElement.addEventListener("keydown", function(event) {
+       searchElement.addEventListener("keydown", function(event) {
       
         if (event.key === "Enter" && !event.isComposing) {
            
-          const searchDate = searchElement.value.trim();
+          const searchDate = searchElement.value.trim().toLowerCase();
            
           if (searchDate === "") {
               return
           }
-        
-          console.log(searchDate);
+
+         articles.forEach(function(article) {
+
+            const Alltext = article.title + article.body + article.credits;
+
+             const SearchNumber = Alltext.split(searchDate);
+
+             const SearchVolume = SearchNumber - 1;
+
+             console.log(result.length);
+            
+         }
 
         }
        });
