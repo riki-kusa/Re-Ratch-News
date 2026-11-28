@@ -304,14 +304,19 @@ sortSeries();
           return;
        }
 
-       const searchElement = document.querySelectorAll(".search");
+       const searchElement = document.querySelector(".search");
+
+      searchElement.addEventListener("keydown", function(event) {
       
-       search.addEventListener("keydown" === "Enter" && !event.isComposing && searchElement.value !== "", function(event) {
-           //ifどこ....//
+       if (event.key === "Enter" && !event.isComposing) {
+           
          const searchDate = searchElement.value.trim();
-
-         console.log("searchDate");
-
+           
+         if (searchDate.value !== "") {
+             return
+         }
+        
+         onsole.log("searchDate");
        });
         
         const archiveTabs = document.querySelectorAll(".archive-tab");
