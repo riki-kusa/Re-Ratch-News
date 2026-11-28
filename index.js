@@ -308,16 +308,19 @@ sortSeries();
 
       searchElement.addEventListener("keydown", function(event) {
       
-       if (event.key === "Enter" && !event.isComposing) {
+        if (event.key === "Enter" && !event.isComposing) {
            
-         const searchDate = searchElement.value.trim();
+          const searchDate = searchElement.value.trim();
            
-         if (searchDate.value !== "") {
-             return
-         }
+          if (searchDate === "") {
+              return
+          }
         
-         onsole.log("searchDate");
+          console.log(searchDate);
+
+        }
        });
+     
         
         const archiveTabs = document.querySelectorAll(".archive-tab");
 
