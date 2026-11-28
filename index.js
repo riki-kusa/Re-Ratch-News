@@ -165,7 +165,8 @@ async function getArticles() {
     
         const archiveList = document.querySelector(".archive-list");
         const sampleCard = archiveList.querySelector(".archive-card");
-        
+        const SearchResult = document.querySelector(".Search-result");
+
         
         function showArchive(articleList) {
 
@@ -343,7 +344,11 @@ sortSeries();
              }
             
           });
-
+          if (ArticlesSearchData.length === 0) {
+            ?.append(SearchResult);
+            SearchResult.hidden = false;
+          }
+        
           ArticlesSearchData.sort(function(a, b) {
             return b.score - a.score;
           });
