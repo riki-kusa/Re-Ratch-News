@@ -76,9 +76,9 @@ h2 {
 
 .Maximum-Title {
     font-size: 30px;
-    border: 2px solid black;
+    border-bottom: 2px solid dray;
     box-sizing: border-box;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 @media screen and (max-width: 768px) {
