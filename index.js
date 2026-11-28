@@ -336,10 +336,18 @@ sortSeries();
                score: SearchVolume
              };
 
-             ArticlesSearchData.push(ArticleData);
+             if (SearchVolume　> 0) {
+                ArticlesSearchData.push(ArticleData);
+             } else {
+                return
+             }
             
           });
 
+          ArticlesSearchData.sort(function(a, b) {
+            return b.score - a.score;
+          });
+        
         }
        });
      
