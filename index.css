@@ -157,6 +157,18 @@ header {
     font-size: 21px;
 }
 
+.search {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  border: none;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #555;
+}
+
+
 .archive-tabs {
     display: flex;
     gap: 16px;
