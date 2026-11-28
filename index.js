@@ -316,17 +316,29 @@ sortSeries();
               return
           }
 
-         articles.forEach(function(article) {
+          const ArticlesSearchData = [];
 
-            const Alltext = article.title + article.body + article.credits;
+          articles.forEach(function(article) {
+
+             const Alltext = article.title + article.body + article.credits;
 
              const SearchNumber = Alltext.toLowerCase().split(searchDate);
 
              const SearchVolume = SearchNumber.length - 1;
 
-             console.log(SearchVolume);
+             const ArticleData = {
+               title: article.title,
+               id: article.id,
+               body: article.body,
+               author: article.author,
+               image: article.image,
+               sharedAt: article.sharedAt,
+               score: SearchVolume
+             };
+
+             ArticlesSearchData.push(ArticleData);
             
-         });
+          });
 
         }
        });
