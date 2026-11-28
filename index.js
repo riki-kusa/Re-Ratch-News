@@ -324,7 +324,7 @@ sortSeries();
 
              const SearchVolume = SearchNumber - 1;
 
-             console.log(result.length);
+             console.log(SearchVolume.length);
             
          }
 
