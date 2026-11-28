@@ -168,6 +168,15 @@ header {
   border-bottom: 1px solid #555;
 }
 
+.search::before {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 14px;
+    background: url("./Lucide-icon/search.svg") center / contain no-repeat;
+    flex-shrink: 0;
+}
+
 
 .archive-tabs {
     display: flex;
