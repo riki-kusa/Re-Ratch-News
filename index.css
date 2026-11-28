@@ -168,6 +168,11 @@ header {
   background: url("./Lucide-icon/search.svg") center / contain no-repeat;
 }
 
+.search:focus {
+    outline: none;
+    border-bottom-color: #950101;
+}
+
 .archive-tabs {
     display: flex;
     gap: 16px;
