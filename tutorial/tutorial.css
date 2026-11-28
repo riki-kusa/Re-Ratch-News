@@ -83,73 +83,106 @@ h2 {
     margin-bottom: 30px;
 }
 
-.flow_design09 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/*
+ * フローデザイン09を参考に改変
+ * 出典：SEOタイムズ
+ * https://seotimes.jp/11-flow-designs/
+ */
+
+.tutorial-flow {
+    width: 100%;
 }
 
-.flow09 {
-  padding-left: 0;
-  border-bottom: solid 1px #E1E8ED;
+.step-list {
+    width: 100%;
+    padding: 0;
+    margin: 25px 0;
+    border-bottom: 1px solid #dddddd;
 }
 
-.flow09 > li {
-  list-style-type: none;
-  display: flex;
-  padding: 20px 0;
-  border-top: solid 1px #E1E8ED;
+.step-list > li {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 20px 0;
+    border-top: 1px solid #dddddd;
 }
 
-.flow09 > li dl dt {
-  font-size: 1.2em;
-  line-height: 2;
-  font-weight: bold;
-  margin-bottom: 10px;
+.step-list > li dl {
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
 }
 
-.flow09 > li .icon09 {
-  line-height: 1;
-  font-size: 2em;
-  font-weight: bold;
-  color: #ba0202;
-  text-align: center;
-  width: 70px;
-  position: relative;
-  margin-top: 0;
+.step-list > li dt {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333333;
 }
 
-.flow09 > li .icon09::before {
-  content: 'STEP';
-  font-size: 0.3em;
-  display: block;
-  margin-bottom: 3px;
-  letter-spacing: 1px;
+.step-list > li dd {
+    margin: 0;
+    color: #444444;
 }
 
-.flow09 > li .icon09::after {
-  content: "";
-  display: block;
-  width: 1px;
-  height: calc(100% - 40px);
-  background-color: #858585;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 60px;
-  margin: auto;
+.step-number {
+    flex: 0 0 60px;
+    line-height: 1;
+    font-size: 2em;
+    font-weight: bold;
+    color: #ba0202;
+    text-align: center;
+    position: relative;
+    min-height: 65px;
 }
 
-.flow09 > li dl dd {
-  margin: 0;
+.step-number::before {
+    content: "STEP";
+    font-size: 0.3em;
+    display: block;
+    margin-bottom: 3px;
+    letter-spacing: 1px;
 }
 
-.flow09 > li dl {
-  width: calc(100% - 70px);
-  margin-top: 0.8em;
+.step-number::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    background-color: #aaaaaa;
+    top: 50px;
+    bottom: 0;
+    left: 50%;
+}
+
+.step-list > li:last-child .step-number::after {
+    display: none;
 }
 
 @media screen and (max-width: 768px) {
+    .step-list > li {
+        gap: 10px;
+    }
+
+    .step-number {
+        flex-basis: 40px;
+        font-size: 1.6em;
+    }
+
+    .step-number::after {
+        top: 40px;
+    }
+
+    .step-list > li dt {
+        font-size: 16px;
+    }
+
+    .step-list > li dd {
+        font-size: 14px;
+    }
+    
     :root {
         --page-gutter: 20px;
     }
