@@ -158,14 +158,15 @@ header {
 }
 
 .search {
-  top: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 250px;
-  border: none;
-  padding-bottom: 3px;
-  border-bottom: 1px solid #555;
-  background: url("./Lucide-icon/search.svg") center / contain no-repeat;
+    width: 250px;
+    min-width: 0;
+    margin: 0 auto 8px;
+    align-self: center;
+    border: none;
+    border-bottom: 1px solid #555;
+    padding: 6px 8px 6px 26px;
+    background: url("./Lucide-icon/search.svg")
+                left 5px center / 14px no-repeat;
 }
 
 .search:focus {
