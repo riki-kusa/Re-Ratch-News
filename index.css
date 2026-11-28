@@ -158,7 +158,6 @@ header {
 }
 
 .search {
-  position: absolute;
   top: 15px;
   left: 50%;
   transform: translateX(-50%);
@@ -166,17 +165,8 @@ header {
   border: none;
   padding-bottom: 3px;
   border-bottom: 1px solid #555;
+  background: url("./Lucide-icon/search.svg") center / contain no-repeat;
 }
-
-.search::before {
-    content: "";
-    display: block;
-    width: 14px;
-    height: 14px;
-    background: url("./Lucide-icon/search.svg") center / contain no-repeat;
-    flex-shrink: 0;
-}
-
 
 .archive-tabs {
     display: flex;
@@ -1063,6 +1053,11 @@ header {
 /* 日付 */
 .archive-date {
   font-size: 11px;
+}
+
+.search {
+    flex: 0 0 100%;
+    margin: 0;
 }
 
     
