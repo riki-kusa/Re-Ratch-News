@@ -23,11 +23,11 @@ h2 {
     margin: 0;
     padding: 8px 10px;
     font-size: 16px;
-    transition: color 0.25s, transform 0.25s;
+    transition: color 0.25s, padding-left 0.25s;
 }
 
 .anchor-link:hover {
-    transform: translateX(7px);
+    padding-left: 17px;
     color: #950101;
 }
 
