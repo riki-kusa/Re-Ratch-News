@@ -360,6 +360,13 @@ header {
   opacity: 0.8;
 }
 
+.Search-results {
+    justify-content: center;
+    align-items: center; 
+    transform: translateY(20px);
+    color: #a9a9a9;
+}
+
 .archive-card {
   display: flex;
   align-items: center;
