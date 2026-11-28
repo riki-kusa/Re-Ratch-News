@@ -303,6 +303,16 @@ sortSeries();
 
           return;
        }
+
+       const searchElement = document.querySelectorAll(".search");
+      
+       search.addEventListener("keydown" === "Enter" && !event.isComposing && searchElement.value !== "", function(event) {
+           //ifどこ....//
+         const searchDate = searchElement.value.trim();
+
+         console.log("searchDate");
+
+       });
         
         const archiveTabs = document.querySelectorAll(".archive-tab");
 
