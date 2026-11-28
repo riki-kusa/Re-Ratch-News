@@ -347,6 +347,8 @@ sortSeries();
           ArticlesSearchData.sort(function(a, b) {
             return b.score - a.score;
           });
+
+          showArchive(ArticlesSearchData);
         
         }
        });
