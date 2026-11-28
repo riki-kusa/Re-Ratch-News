@@ -320,13 +320,13 @@ sortSeries();
 
             const Alltext = article.title + article.body + article.credits;
 
-             const SearchNumber = Alltext.split(searchDate);
+             const SearchNumber = Alltext.toLowerCase().split(searchDate);
 
-             const SearchVolume = SearchNumber - 1;
+             const SearchVolume = SearchNumber.length - 1;
 
-             console.log(SearchVolume.length);
+             console.log(SearchVolume);
             
-         }
+         });
 
         }
        });
