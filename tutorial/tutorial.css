@@ -26,11 +26,6 @@ h2 {
     transition: color 0.25s, padding-left 0.25s;
 }
 
-.anchor-link:hover {
-    padding-left: 17px;
-    color: #950101;
-}
-
 .anchor-link.parent {
     color: #333333;
     font-weight: bold;
@@ -41,6 +36,11 @@ h2 {
     border-left: 1px solid #cccccc;
     font-size: 14px;
     color: #666666;
+}
+
+.anchor-link:hover {
+    padding-left: 17px;
+    color: #950101;
 }
 
 .drawer-heading {
