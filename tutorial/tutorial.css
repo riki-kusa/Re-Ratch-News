@@ -83,6 +83,72 @@ h2 {
     margin-bottom: 30px;
 }
 
+.flow_design09 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flow09 {
+  padding-left: 0;
+  border-bottom: solid 1px #E1E8ED;
+}
+
+.flow09 > li {
+  list-style-type: none;
+  display: flex;
+  padding: 20px 0;
+  border-top: solid 1px #E1E8ED;
+}
+
+.flow09 > li dl dt {
+  font-size: 1.2em;
+  line-height: 2;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.flow09 > li .icon09 {
+  line-height: 1;
+  font-size: 2em;
+  font-weight: bold;
+  color: #ba0202;
+  text-align: center;
+  width: 70px;
+  position: relative;
+  margin-top: 0;
+}
+
+.flow09 > li .icon09::before {
+  content: 'STEP';
+  font-size: 0.3em;
+  display: block;
+  margin-bottom: 3px;
+  letter-spacing: 1px;
+}
+
+.flow09 > li .icon09::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: calc(100% - 40px);
+  background-color: #858585;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 60px;
+  margin: auto;
+}
+
+.flow09 > li dl dd {
+  margin: 0;
+}
+
+.flow09 > li dl {
+  width: calc(100% - 70px);
+  margin-top: 0.8em;
+}
+
 @media screen and (max-width: 768px) {
     :root {
         --page-gutter: 20px;
