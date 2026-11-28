@@ -74,6 +74,11 @@ h2 {
     background-color: #ffffff;
 }
 
+.Maximum-Title {
+    font-size: 30px;
+    
+}
+
 @media screen and (max-width: 768px) {
     :root {
         --page-gutter: 20px;
